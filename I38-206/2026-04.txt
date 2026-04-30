@@ -17,3 +17,22 @@ CVE-2025-11187  MEDIUM — Stack buffer overflow in PKCS#12 MAC verification (PB
 
 ACTION: If upgrade target is 3.5.x, ensure 3.5.6 is the pinned version. CVE-2025-15467 (CVSS 9.8) and CVE-2026-28387 (HIGH) are the most critical findings since the 3.5.0 initial release.
 
+=== [2026-04-30 02:30 UTC] (concurrent run) ===
+Last review: N/A (Jira API unreachable from agent environment; first entry in log)
+Target: OpenSSL 3.5.x (upgrade target per ticket I38-206)
+NOTE: Exact version target from ticket could not be fetched. Search covers OpenSSL 3.5.x branch.
+
+New releases since last review:
+  - OpenSSL 3.5.6 — released 2026-04-07 (security patch release)
+  - OpenSSL 3.5.5 — released 2026-01-27
+
+CVEs fixed in OpenSSL 3.5.6 (2026-04-07):
+  CVE-2026-31790  | Moderate | Incorrect failure handling in RSA KEM RSASVE encapsulation
+  CVE-2026-2673   | Moderate | Loss of key agreement group tuple structure with DEFAULT keyword in server-side config
+  CVE-2026-28387  | Moderate | Potential use-after-free in DANE client code
+  CVE-2026-28388  | Moderate | NULL pointer dereference when processing a delta CRL
+  CVE-2026-28389  | Moderate | Possible NULL dereference when processing CMS KeyAgreeRecipientInfo
+  CVE-2026-28390  | Moderate | Possible NULL dereference when processing CMS KeyTransportRecipientInfo
+
+Action: Ensure upgrade target is pinned to >= 3.5.6 to incorporate all Moderate fixes above.
+
