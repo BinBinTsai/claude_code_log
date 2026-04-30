@@ -1,0 +1,19 @@
+=== 2026-04-30 02:30 UTC ===
+Last review: N/A (first entry; Jira I38-206 unreachable — splashtop.atlassian.net returned 403 "Host not in allowlist" for this runner's IP)
+Target: OpenSSL 3.5.x (LTS, released 2025-04-08, supported until April 2030)
+
+Latest 3.5.x release: 3.5.6 (released ~2026-04-07 per OpenSSL advisory timeline)
+
+--- April 2026 security release (3.5.6) ---
+CVE-2026-28387  HIGH   — Use-after-free/double-free in DANE client when server publishes mixed TLSA record types (PKIX-TA/PKIX-EE with DANE-TA); can corrupt memory or enable code execution. Affects 3.5.0–3.5.5. Fixed in 3.5.6.
+CVE-2026-28386  MEDIUM — OOB read (up to 15 bytes) in AES-CFB-128 assembly on x86-64 with AVX-512/VAES; can crash process (DoS). Fixed in 3.5.6.
+CVE-2026-2673   MEDIUM — Flaw in post-quantum hybrid key deployment path. Fixed in 3.5.6.
+NULL dereference — Processing CMS KeyAgreeRecipientInfo; DoS. Fixed in 3.5.6.
+
+--- January 2026 security release (3.5.5) ---
+CVE-2025-15467  CRITICAL (CVSS 9.8) — Stack buffer overflow in CMS AuthEnvelopedData parsing (AES-GCM); pre-authentication RCE. Fixed in 3.5.5.
+CVE-2025-11187  MEDIUM — Stack buffer overflow in PKCS#12 MAC verification (PBKDF2 key length attacker-controlled). Fixed in 3.5.5.
++ 10 additional vulnerabilities patched (see openssl-library.org/post/2026-01-27-release-announcement/).
+
+ACTION: If upgrade target is 3.5.x, ensure 3.5.6 is the pinned version. CVE-2025-15467 (CVSS 9.8) and CVE-2026-28387 (HIGH) are the most critical findings since the 3.5.0 initial release.
+
