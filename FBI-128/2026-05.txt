@@ -1,0 +1,20 @@
+=== 2026-05-04 12:00 UTC ===
+Last review: 2026-04-09 (Jira comment by Loko Tsai)
+
+freerdp       | 3.24.1 (src) / 3.24.2 | 3.25.0 (2026/04/23) | CVE-2026-33984 (heap buffer overflow, arbitrary code exec) + CVE-2026-33983 (DoS via crafted RDP messages). CVSS 7.3 High. UPGRADE RECOMMENDED.
+minizip       | 4.0.7                  | 4.1.1 (2026/04/23)  | Arbitrary file write vuln (symlink bypass) reported in 4.1.0 (2026/01/27). 4.1.1 is latest.
+CUDA          | 13.2                   | 13.2 Update 1 (2026/04/14) | Already noted in ticket. No new CVEs.
+libcurl       | 8.18.0 / 8.19.0       | 8.19.0               | No new CVEs in Apr-May 2026.
+FFmpeg        | 7.1.2                  | 8.1 (2026/03/16)     | CVE-2025-25469 (memory leak in libavutil/iamf.c, git-master). No new stable release.
+libvpx        | 1.15.0                 | 1.16.0 (2026/01/22)  | CVE-2026-2447 + CVE-2026-1861 already noted 04/09. No further updates.
+libssh        | 0.11.4                 | 0.11.4 / 0.12.0 (2026/02/10) | No new releases since Feb. SUSE advisory 2026/05/01 for distro packages.
+libwebsockets | 2.1.0                  | 4.5.8 (2026/03/27)   | No new release since March.
+zlib          | 1.3.2                  | 1.3.2 (2026/02/17)   | No new CVEs.
+Opus          | 1.3-rc2                | 1.6.1 (2026/01/14)   | No new release or CVE.
+x264          | 116.2042               | 165 (r3222)          | No new release or CVE.
+libwebm       | 1.0.0.31               | 1.0.0.32 (2025/06/26)| No new release or CVE.
+choco         | 2.5.0                  | 2.7.1 (2026/04/01)   | No new release since 2.7.1.
+
+Action items:
+- freerdp 3.25.0: Critical — heap buffer overflow (CVE-2026-33984) allows arbitrary code execution. Upgrade from 3.24.x strongly recommended.
+- minizip 4.1.1: Review arbitrary file write issue before upgrading from 4.0.7.

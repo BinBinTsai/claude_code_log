@@ -1,0 +1,21 @@
+=== 2026-05-04 12:00 UTC ===
+Last review: 2026-04-23 (Jira comment by Loko Tsai)
+Target: OpenSSL 3.5.6
+
+OpenSSL 3.5.6 remains the latest 3.5.x release (released 2026/04/07).
+No new 3.5.x release (3.5.7) has been published since April.
+Other branches: 3.6.2 (2026/04/07), 4.0.0 (2026/04/14) — not on upgrade path.
+
+CVE status update (7 CVEs fixed in 3.5.6):
+  CVE-2026-2673   | 3.5.6 | Low / 7.5 High (NVD)       | Fixed
+  CVE-2026-28386  | 3.6.2 only | Low / 9.1 Critical (NVD) | NOT in 3.5.6 — affects AES-CFB-128 on AVX-512. Monitor for 3.5.x backport.
+  CVE-2026-28387  | 3.5.6 | Low / 3.7 (NVD)            | Use-after-free in DANE client code. Fixed.
+  CVE-2026-28388  | 3.5.6 | Low / 7.5 High (NVD)       | NULL ptr deref in Delta CRL. Fixed.
+  CVE-2026-28389  | 3.5.6 | Low / 7.5 High (NVD)       | Fixed.
+  CVE-2026-28390  | 3.5.6 | Low / 7.5 High (NVD)       | Fixed.
+  CVE-2026-31789  | 3.5.6 | Low / N/A                   | Heap buffer overflow in hex conversion. Fixed.
+  CVE-2026-31790  | 3.5.6 | Moderate / 7.5 High (NVD)  | RSA KEM incorrect failure handling. Fixed.
+
+Note: CVE-2026-28386 (CVSS 9.1 Critical) is only fixed in 3.6.2, NOT in 3.5.6. Affects AES-CFB-128 assembly on x86-64 with AVX-512/VAES. Monitor OpenSSL for potential 3.5.7 backport.
+
+No changes since last review (2026-04-23).
