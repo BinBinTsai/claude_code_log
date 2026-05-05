@@ -1,3 +1,15 @@
+=== 2026-05-05 01:02 UTC ===
+Last review: 2026-04-23 (from prior log entry; Jira API unavailable from runner IP)
+Target: OpenSSL 3.5.6
+
+No new OpenSSL 3.5.x release since 3.5.6 (2026-04-07).
+No new CVEs affecting OpenSSL 3.5.x detected as of 2026-05-05.
+
+Ongoing monitor item: CVE-2026-28386 (CVSS 9.1 Critical, AES-CFB-128 / AVX-512 OOB read) remains
+unpatched in the 3.5.x branch — only fixed in 3.6.2. Watch for a 3.5.7 backport.
+
+No changes.
+
 === 2026-05-04 12:00 UTC ===
 Last review: 2026-04-23 (Jira comment by Loko Tsai)
 Target: OpenSSL 3.5.6
