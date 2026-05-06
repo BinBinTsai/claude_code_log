@@ -1,3 +1,26 @@
+=== 2026-05-06 01:08 UTC ===
+Last review: 2026-05-05 (previous log entry; Jira API unavailable from runner IP)
+
+freerdp       | 3.25.0   | 3.25.0 (2026-04-23) | No new release since 3.25.0. No new CVEs since prior entries.
+libvpx        | 1.16.0   | 1.16.0 (2026-01-22) | No new release. CVE-2026-1861 and CVE-2026-2447 noted in prior entries; no new CVEs.
+FFmpeg        | 7.1.2    | 8.1.1 (2026-05-04)  | ** NEW PATCH ** — 8.1.1 released 2026-05-04 (patch over 8.1); 7.1.4 also released 2026-05-05. No security CVEs specifically listed for 8.1.1; check official security page for details.
+libwebsockets | 4.5.8    | 4.5.8 (2026-03-27)  | No new release or CVE.
+libcurl       | 8.19.0   | 8.20.0 (2026-04-29) | No new release since 8.20.0. Upgrade from 8.19.0 still pending (8 CVEs fixed). Next curl release not yet announced.
+minizip-ng    | 4.1.1    | 4.2.1 (2026-04-27)  | No new release since 4.2.1. Upgrade from 4.1.1 still pending (symlink arbitrary file write fix in 4.2.0).
+libwebm       | 1.0.0.32 | 1.0.0.32            | No new release or CVE.
+AMF           | 1.5.0    | 1.5.0               | No new release or CVE.
+Opus          | 1.6.1    | 1.6.1 (2026-01-14)  | No new release or CVE.
+x264          | r3222    | r3223 (165.3223+26) | r3223 identified; ShiftMediaProject repo archived 2026-01-26. No security CVEs.
+CUDA          | 13.2.1   | 13.2.1 (2026-04-14) | No new release. No security CVEs.
+NV Codec SDK  | 13.0     | 13.0 (2026-01)      | No new release or CVE.
+zlib          | 1.3.2    | 1.3.2 (2026-02-17)  | CVE-2026-22184 (CVSS 9.3, untgz contrib utility only, not core library) — fix exists in 1.3.1.3 standalone patch; no new May update. 1.3.2 addresses 7ASecurity audit findings.
+libssh        | 0.11.4   | 0.12.0 (2026-02-10) | No new release since 0.12.0. No new CVEs. Prior CVEs (CVE-2026-0964 through CVE-2026-0968) all fixed in 0.12.0.
+
+Action items (carried forward):
+- libcurl 8.20.0: Upgrade from 8.19.0 — 8 CVEs fixed. Verify NTLM/SMB disablement impact.
+- minizip-ng 4.2.1: Upgrade from 4.1.1 — symlink arbitrary file write vulnerability resolved in 4.2.0.
+- FFmpeg 8.1.1: New patch release (2026-05-04) — verify security.html for any backported fixes.
+
 === 2026-05-05 01:02 UTC ===
 Last review: 2026-05-04 (previous log entry; Jira API unavailable from runner IP)
 
