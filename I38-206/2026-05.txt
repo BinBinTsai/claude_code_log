@@ -1,3 +1,22 @@
+=== 2026-05-08 01:10 UTC ===
+Last review: 2026-05-06 (previous log entry; Jira API unavailable from runner IP)
+Target: OpenSSL 3.5.6
+
+No new OpenSSL 3.5.x release since 3.5.6 (2026-04-07). No 3.5.7 published as of 2026-05-08.
+No new CVEs affecting OpenSSL 3.5.x detected as of 2026-05-08.
+
+Current CVE status for OpenSSL 3.5.6 (unchanged from prior entry):
+  CVE-2026-31790  | Moderate     | Incorrect failure handling in RSA KEM RSASVE encapsulation | Fixed in 3.5.6
+  CVE-2026-2673   | Moderate     | Key agreement group tuple loss with DEFAULT keyword | Fixed in 3.5.6
+  CVE-2026-28387  | Moderate     | Use-after-free in DANE client code | Fixed in 3.5.6
+  CVE-2026-28388  | Moderate     | NULL deref in delta CRL processing | Fixed in 3.5.6
+  CVE-2026-28389  | Moderate     | NULL deref in CMS KeyAgreeRecipientInfo | Fixed in 3.5.6
+  CVE-2026-28390  | Moderate     | NULL deref in CMS KeyTransportRecipientInfo | Fixed in 3.5.6
+  CVE-2026-31789  | Low          | Heap buffer overflow in hex conversion | Fixed in 3.5.6
+  CVE-2026-28386  | Low (NVD 9.1)| AES-CFB-128 OOB read on x86-64 with AVX-512/VAES | Fixed in 3.5.6 (see prior correction)
+
+No changes since last review.
+
 === 2026-05-06 01:08 UTC ===
 Last review: 2026-05-05 (previous log entry; Jira API unavailable from runner IP)
 Target: OpenSSL 3.5.6
