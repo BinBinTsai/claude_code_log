@@ -1,3 +1,28 @@
+=== 2026-05-16 01:07 UTC ===
+Last review: 2026-05-14 (previous log entry; Jira API unavailable from runner IP)
+
+freerdp       | 3.25.0   | 3.26.0 (2026-05-06) | No new release since last review. Upgrade from 3.25.0 still required.
+libvpx        | 1.16.0   | 1.16.0 (2026-01-22) | No new release. CVE-2026-1861 and CVE-2026-2447 (heap overflows, browser-exploitable) previously noted; no new CVEs since last review.
+FFmpeg        | 7.1.2    | 8.1.1 (2026-05-04) / 7.1.4 (2026-05-05) | No new release. CVE-2026-40962 (Critical 9.8) and CVE-2026-30999 (High) confirmed in prior entries; upgrade to 7.1.4 or 8.1.1 still pending.
+libwebsockets | 4.5.8    | 4.5.8 (2026-03-27)  | No new release. No new CVEs.
+libcurl       | 8.19.0   | 8.20.0 (2026-04-29) | No new release (8.21.0 planned 2026-06-24). AI tool Mythos confirmed 1 real low-severity vulnerability pending publication with 8.21.0. Upgrade from 8.19.0 still pending.
+minizip-ng    | 4.1.1    | 4.2.1 (2026-04-27)  | No new release. No new CVEs. Upgrade from 4.1.1 still pending.
+libwebm       | 1.0.0.32 | 1.0.0.32            | No new release. No new CVEs.
+AMF           | 1.5.0    | 1.5.2 (2026-05)     | No new release beyond 1.5.2. No new CVEs.
+Opus          | 1.6.1    | 1.6.1 (2026-01-14)  | No new release. No new CVEs to libopus (CVE-2026-40614 is in PJSIP Opus consumer, not libopus itself).
+x264          | r3222    | r3223               | No new release. No CVEs. ShiftMediaProject Windows build repo archived 2026-01-26.
+CUDA          | 13.2.1   | 13.2.1 (2026-04-14) | No new release. No new CVEs.
+NV Codec SDK  | 13.0     | 13.0 (2026-01)      | No new release. No new CVEs.
+zlib          | 1.3.2    | 1.3.2 (2026-02-17)  | No new release. Note: CVE-2026-22184 (CVSS 9.3 critical, global buffer overflow in untgz) affects <=1.3.1.2 only — tracked 1.3.2 is NOT affected. No new CVEs since last review.
+libssh        | 0.11.4   | 0.12.0 (2026-02-10) | No new release. No new CVEs since last review.
+
+Action items (carried forward):
+- freerdp 3.26.0: Upgrade from 3.25.0 — 8+ CVEs fixed.
+- FFmpeg CVE-2026-40962 (Critical 9.8) + CVE-2026-30999 (High): confirmed — assess exposure on 7.1.2; upgrade to 7.1.4 or 8.1.1 recommended.
+- libcurl 8.20.0: Upgrade from 8.19.0 — CVE-2026-7168 confirmed fixed. Low-severity CVE pending with 8.21.0 (planned 2026-06-24).
+- AMF 1.5.2: Upgrade from 1.5.0 — requires Adrenalin 26.5.1 driver.
+- minizip-ng 4.2.1: Upgrade from 4.1.1 — symlink arbitrary file write fix in 4.2.0.
+
 === 2026-05-14 01:05 UTC ===
 Last review: 2026-05-13 (previous log entry; Jira API unavailable from runner IP)
 
