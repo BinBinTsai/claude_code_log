@@ -1,3 +1,26 @@
+=== 2026-05-24 01:05 UTC ===
+Last review: N/A — Jira API unreachable (splashtop.atlassian.net blocked by sandbox egress policy)
+Target: OpenSSL 3.5.x (version from ticket unknown; Jira unreachable)
+
+Latest release: OpenSSL 3.5.6 (released 2026-04-07)
+
+CVEs fixed in OpenSSL 3.5.6:
+  CVE-2026-31790 — Incorrect failure handling in RSA KEM RSASVE encapsulation (Moderate)
+  CVE-2026-2673  — Loss of key agreement group tuple structure with DEFAULT keyword (Moderate)
+  CVE-2026-28387 — Potential use-after-free in DANE client code (Moderate)
+  CVE-2026-28388 — NULL pointer dereference processing delta CRLs (Moderate)
+  CVE-2026-28389 — NULL dereference processing CMS KeyAgreeRecipientInfo (Moderate)
+  CVE-2026-28390 — NULL dereference processing CMS KeyTransportRecipientInfo (Moderate)
+  CVE-2026-31789 — Heap buffer overflow in hexadecimal conversion (Moderate)
+
+Earlier critical CVE still relevant if not yet on 3.5.5+:
+  CVE-2025-15467 — CVSS 9.8, stack buffer overflow pre-auth, affects 3.0–3.6, fixed in 3.5.5
+  CVE-2026-22795 / CVE-2026-22796 — additional vulns patched in earlier 3.5.x series
+
+Recommendation: If currently below 3.5.6, upgrade immediately. OpenSSL 3.5.7 not yet released.
+
+Note: Jira ticket I38-206 could not be fetched (403 — host not in egress allowlist). Upgrade target version unknown; manual cross-check required.
+
 === 2026-05-23 01:05 UTC ===
 Last review: 2026-05-22 (previous log entry; Jira API unavailable from runner IP)
 Target: OpenSSL 3.5.6
