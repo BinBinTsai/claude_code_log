@@ -1,3 +1,19 @@
+=== 2026-05-25 01:02 UTC ===
+Last review: 2026-05-24 (prior log entry; Jira API still blocked by sandbox egress policy)
+Target: OpenSSL 3.5.x (version from Jira ticket unavailable; last known target 3.5.x series)
+
+Latest release: OpenSSL 3.5.6 (released 2026-04-07) — no new 3.5.x release since 2026-05-24.
+OpenSSL 4.0 final released 2026-04-14 (separate branch; future migration consideration).
+
+CVEs / Notes since 2026-05-24:
+  No new CVEs affecting OpenSSL 3.5.x detected since 2026-05-24.
+  All previously documented CVEs (CVE-2026-31790, CVE-2026-2673, CVE-2026-28387,
+  CVE-2026-28388, CVE-2026-28389, CVE-2026-28390, CVE-2026-31789, CVE-2025-15467)
+  are fixed in OpenSSL 3.5.6.
+
+Recommendation: If not yet on 3.5.6, upgrade immediately to clear all known CVEs.
+  Note: 2026-05-07 OpenSSL future release schedule post published — monitor for 3.5.7 ETA.
+
 === 2026-05-24 01:05 UTC ===
 Last review: N/A — Jira API unreachable (splashtop.atlassian.net blocked by sandbox egress policy)
 Target: OpenSSL 3.5.x (version from ticket unknown; Jira unreachable)
