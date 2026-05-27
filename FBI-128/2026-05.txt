@@ -1,3 +1,29 @@
+=== 2026-05-27 01:03 UTC ===
+Last review: 2026-05-26 (prior log entry; Jira API still blocked by sandbox egress policy)
+
+Library       | Current (last known) | New Latest           | CVE / Notes
+freerdp       | 3.25.0               | 3.26.0 (2026-05-06)  | No new release. CVE IDs for 3 high fixes in 3.26.0 not yet formally assigned. Upgrade still pending.
+libvpx        | 1.16.0               | 1.16.0               | No changes.
+FFmpeg        | 7.1.2                | 8.0.2 (2026-05-04) / 7.1.4 | 8.0.2 released 2026-05-04 (8.0 branch maint, older than tracked 8.1.1). No new CVEs since 2026-05-26. CVE-2026-40962 (Critical 9.8), CVE-2026-30999 (High), CVE-2026-6385 (High) still unpatched on tracked 7.1.2; upgrade pending.
+libwebsockets | 4.5.8                | 4.5.8                | No changes.
+libcurl       | 8.19.0               | 8.20.0 (2026-04-29)  | UPDATE: curl maintainer blog 2026-05-26 ("The pressure") reports 12 CVEs confirmed pending for 8.21.0 (planned 2026-06-24), up from 1 previously noted. All LOW/MEDIUM severity per project history. Upgrade from 8.19.0 → 8.20.0 still pending; monitor 8.21.0.
+minizip-ng    | 4.1.1                | 4.2.1 (2026-04-27)   | No new release. No new CVEs. Upgrade still pending.
+libwebm       | 1.0.0.32             | 1.0.0.32             | No changes.
+AMF           | 1.5.0                | 1.5.2                | No new release. No CVEs. Upgrade still pending.
+Opus          | 1.6.1                | 1.6.1                | No changes.
+x264          | r3222                | r3223                | No changes.
+CUDA          | 13.2.1               | 13.2.1               | No changes.
+NV Codec SDK  | 13.0                 | 13.0.19              | No changes.
+zlib          | 1.3.2                | 1.3.2                | No changes. CVE-2026-22184 (CVSS 9.3) and CVE-2026-27171 do not affect tracked 1.3.2.
+libssh        | 0.11.4               | 0.12.0 (2026-02-10)  | No new release. All known CVEs fixed in 0.11.4/0.12.0. Upgrade still pending.
+
+Action items (carried forward):
+- freerdp: Upgrade 3.25.0 → 3.26.0 (fixes 3 unidentified high CVEs)
+- libcurl: Upgrade 8.19.0 → 8.20.0; monitor 8.21.0 (2026-06-24, 12 CVEs pending — elevated from prior estimate of 1)
+- minizip-ng: Upgrade 4.1.1 → 4.2.1
+- AMF: Upgrade 1.5.0 → 1.5.2
+- libssh: Upgrade 0.11.4 → 0.12.0
+
 === 2026-05-26 01:04 UTC ===
 Last review: 2026-05-25 (prior log entry; Jira API still blocked by sandbox egress policy)
 
