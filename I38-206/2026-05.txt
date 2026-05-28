@@ -1,3 +1,16 @@
+=== 2026-05-28 01:03 UTC ===
+Last review: 2026-05-27 (prior log entry; Jira API still blocked by sandbox egress policy)
+Target: OpenSSL 3.5.6
+
+No new OpenSSL 3.5.x release since 3.5.6 (2026-04-07). No 3.5.7 published as of 2026-05-28.
+No new CVEs affecting OpenSSL 3.5.x detected since last review (2026-05-27).
+All known CVEs for the 3.5.x branch remain fixed in the upgrade target 3.5.6.
+
+Note: OpenSSL 4.0.0 (released 2026-04-14, post-quantum cryptography, ECH support) is not a
+drop-in replacement for 3.x. Tracked upgrade target remains OpenSSL 3.5.6.
+
+No changes requiring action since last review.
+
 === 2026-05-27 01:03 UTC ===
 Last review: 2026-05-26 (prior log entry; Jira API still blocked by sandbox egress policy)
 Target: OpenSSL 3.5.6
