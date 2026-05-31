@@ -1,3 +1,32 @@
+=== 2026-05-31 01:03 UTC ===
+Last review: 2026-05-30 (prior log entry; Jira API still blocked by sandbox egress policy)
+
+Library       | Current (last known) | New Latest           | CVE / Notes
+freerdp       | 3.25.0               | 3.26.0               | NEW CVEs published 2026-05-29: CVE-2026-44420 (CVSS 8.8 HIGH, cliprdr heap OOB write via undersized capabilitySetLength, malicious client→server RCE), CVE-2026-44421 (CVSS 8.8 HIGH, RDPGFX CacheToSurface heap OOB write, malicious server→client RCE), CVE-2026-45700 (CVSS 7.7 HIGH CVSSv4, planar bitmap decoder heap OOB write via large nDstStep+nXDst). Two unassigned GHSAs also published May 2026: GHSA-j9q5-7g8m-jc9v (RDPEAR NDR ref-id aliasing UAF/double-free/type confusion, CVSS 7.5 HIGH) and GHSA-3mv2-5q57-2v8h (drdynvc race/UAF, Moderate, fixed in 3.22.0). All fixed in 3.26.0 (released 2026-05-06). CRITICAL: upgrade from 3.25.0 immediately.
+libvpx        | 1.16.0               | 1.16.0               | No changes. CVE-2026-1861 (CVSS 8.8, heap overflow) still tracked; no standalone libvpx patch released.
+FFmpeg        | 7.1.2                | 8.1.1                | No changes. CVE-2026-40962 (Critical CVSS 9.8), CVE-2026-30997, CVE-2026-6385 still unpatched on tracked 7.1.2. Upgrade URGENT (carried forward).
+libwebsockets | 4.5.8                | 4.5.8                | No changes.
+libcurl       | 8.19.0               | 8.20.0               | No changes. curl 8.21.0 planned 2026-06-24 with one pending low-severity CVE (found by Mythos AI audit 2026-05-11; no CVE ID yet). Upgrade from 8.19.0 still pending.
+minizip-ng    | 4.1.1                | 4.2.1                | No changes. Symlink arb-file-write (issue #936) and absolute-path bypass (issue #944) still lack CVE assignment. Upgrade still pending.
+libwebm       | 1.0.0.32             | 1.0.0.32             | No changes.
+AMF           | 1.5.0                | 1.5.2                | No changes. AMD-SB-6027 (May 2026) covers GPU kernel driver CVEs (CVE-2026-46197, CVE-2026-46218); no AMF SDK-level CVE. Upgrade still pending (requires Adrenalin 26.5.1 driver).
+Opus          | 1.6.1                | 1.6.1                | No changes.
+x264          | r3222                | r3223                | No changes.
+CUDA          | 13.2.1               | 13.3 (2026-05-26)    | CUDA 13.3 released 2026-05-26 (Tile C++ model, CUDA Python 1.0, CompileIQ auto-tuning). No security CVEs in this release. NVIDIA GPU Display Driver bulletin (May 2026) has driver-level CVEs (CVE-2026-24187 CVSS 8.8, CVE-2026-24190/91/92 CVSS 7.8) but not CUDA Toolkit. No security requirement to upgrade immediately.
+NV Codec SDK  | 13.0                 | 13.0.19              | No changes.
+zlib          | 1.3.2                | 1.3.2                | No changes.
+libssh        | 0.11.4               | 0.12.0               | No changes. All known CVEs (CVE-2026-0964–0968, CVE-2025-14821) fixed in 0.11.4/0.12.0. Upgrade still pending.
+
+Action items (carried forward + new):
+- freerdp: CRITICAL — upgrade 3.25.0 → 3.26.0 immediately; CVE-2026-44420/44421/45700 (all HIGH 7.7–8.8) published 2026-05-29, fixed in 3.26.0.
+- FFmpeg: URGENT — upgrade 7.1.2 → 8.1.1; CVE-2026-40962 (Critical 9.8) confirmed fixed in 8.1+.
+- libvpx: Monitor upstream for standalone 1.16.x patch for CVE-2026-1861 (CVSS 8.8, heap overflow).
+- libcurl: Upgrade 8.19.0 → 8.20.0; monitor 8.21.0 (~2026-06-24) for pending low-severity CVE.
+- minizip-ng: Upgrade 4.1.1 → 4.2.1.
+- AMF: Upgrade 1.5.0 → 1.5.2 (requires Adrenalin 26.5.1 driver).
+- libssh: Upgrade 0.11.4 → 0.12.0.
+- CUDA: Evaluate upgrade to 13.3 (feature release; no security urgency).
+
 === 2026-05-30 01:05 UTC ===
 Last review: 2026-05-29 (prior log entry; Jira API still blocked by sandbox egress policy)
 
