@@ -1,0 +1,19 @@
+=== 2026-06-01 01:03 UTC ===
+Last review: 2026-05-31 (prior log entry; Jira API still blocked by sandbox egress policy)
+
+Library       | Current (last known) | Latest Available     | CVE / Notes
+freerdp       | 3.25.0               | 3.26.0               | No new release (3.27 not yet announced). Carried: upgrade to 3.26.0 pending (CVE-2026-44420/44421/44422 fixed in 3.26.0).
+libvpx        | 1.16.0               | 1.16.0               | No changes. CVE-2026-2447 (heap overflow, HIGH) and CVE-2026-1861 still tracked.
+FFmpeg        | 7.1.2                | 8.1.1                | No new release. Carried: upgrade URGENT — CVE-2026-40962 (CVSS 9.8), CVE-2026-30997, CVE-2026-6385 unpatched on 7.1.2.
+libwebsockets | 4.5.8                | 4.5.8                | No changes.
+libcurl       | 8.19.0               | 8.20.0               | No new release. curl 8.21.0 planned 2026-06-24 with one pending low-severity CVE (no ID yet). Upgrade to 8.20.0 still pending.
+minizip-ng    | 4.1.1                | 4.2.1                | No changes. Symlink arb-file-write (issue #936) and abs-path bypass (issue #944) unresolved. Upgrade pending.
+libwebm       | 1.0.0.32             | 1.0.0.32             | No changes.
+AMF           | 1.5.0                | 1.5.2                | No changes. Upgrade pending (requires Adrenalin 26.5.1+ driver).
+Opus          | 1.6.1                | 1.6.1                | No changes.
+x264          | r3222                | r3223                | No changes.
+CUDA          | 13.2.1               | 13.3 (2026-05-26)    | No changes. No security CVEs in 13.3; no immediate security requirement.
+NV Codec SDK  | 13.0                 | 13.0.19              | No changes.
+zlib          | 1.3.2                | 1.3.2                | No changes. CVE-2026-22184 (CVSS 9.3) affects untgz utility only, not core lib. Monitor for 1.3.3.
+libssh        | 0.11.4               | 0.12.0               | No changes. Upgrade pending.
+
