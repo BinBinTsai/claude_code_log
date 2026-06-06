@@ -1,3 +1,27 @@
+=== 2026-06-06 01:06 UTC ===
+Last review: N/A (Jira splashtop.atlassian.net unreachable from agent network — host not in allowlist)
+
+Library          | Current (from ticket) | Latest known       | CVE / Notes
+-----------------+-----------------------+--------------------+-------------------------------------------------------------
+freerdp          | unknown               | 3.26.0 (2026-05-06)| CVE-2026-44420, CVE-2026-44421, CVE-2026-44422, CVE-2026-33983 (heap overflows/DoS) — ACTION REQUIRED
+libvpx           | unknown               | 1.16.0 (2026-01-06)| CVE-2026-2447 (heap overflow, Firefox), CVE-2026-1861 (heap overflow, Chrome)
+FFmpeg           | unknown               | 8.1.1 (2026-05-04) | No new CVEs confirmed May–Jun 2026
+libwebsockets    | unknown               | 4.5.2              | CVE-2026-10650 (resource consumption via SSH parser, 2026-06-02) — ACTION REQUIRED
+libcurl          | unknown               | 8.20.0 (2026-04-29)| CVE-2026-6276 (cookie leak on Host header reuse, low severity)
+minizip          | unknown               | no new release     | No CVEs identified
+libwebm          | unknown               | 1.0.0.32           | No CVEs identified
+AMF              | unknown               | 1.5.2              | No CVEs identified
+Opus             | unknown               | 1.6.1 (2026-01-14) | CVE-2026-40614 in PJSIP Opus decoder (not core codec); verify if affected
+x264             | unknown               | r3222 (2026-05-26) | No CVEs identified
+CUDA Toolkit     | unknown               | 13.3.0 (2026-05-27)| No Toolkit-specific CVEs; check GPU driver advisories separately
+NV Codec SDK     | unknown               | 13.0               | No CVEs identified
+zlib             | unknown               | 1.3.2 (2026-02-17) | CVE-2026-22184 (CVSS 9.3, buffer overflow in untgz utility — not zlib core)
+libssh           | unknown               | 0.12.0 / 0.11.4 (2026-02) | CVE-2026-0968 (SFTP DoS), CVE-2026-0965 (config DoS), CVE-2026-0966, CVE-2026-0964 — ACTION REQUIRED
+
+Note: Jira ticket FBI-128 could not be fetched (network policy blocks splashtop.atlassian.net).
+      "Current" versions and last review date are unavailable; update ticket manually.
+      Prioritize: freerdp (4 CVEs), libwebsockets (CVE-2026-10650), libssh (4 CVEs).
+
 === 2026-06-05 01:08 UTC ===
 Last review: 2026-06-04 (prior log entry; Jira API blocked by sandbox egress policy)
 

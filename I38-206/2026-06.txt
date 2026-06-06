@@ -1,3 +1,26 @@
+=== 2026-06-06 01:06 UTC ===
+Last review: N/A (Jira splashtop.atlassian.net unreachable from agent network — host not in allowlist)
+Target: OpenSSL 3.5.x (LTS — supported through 2030-04-08)
+
+Latest release : OpenSSL 3.5.6 (released 2026-04-07)
+
+CVEs addressed in 3.5.6 (most recent patch release):
+  CVE-2026-31790  Incorrect Failure Handling in RSA KEM RSASVE Encapsulation
+  CVE-2026-2673   Loss of key agreement group tuple structure
+  CVE-2026-28387  Potential Use-after-free in DANE Client Code
+  CVE-2026-28388  NULL Pointer Dereference in Delta CRL Processing
+  CVE-2026-28389  NULL Dereference in CMS KeyAgreeRecipientInfo
+  CVE-2026-28390  NULL Dereference in CMS KeyTransportRecipientInfo
+  CVE-2026-31789  Heap Buffer Overflow in Hexadecimal Conversion
+
+New CVEs since May 2026: None confirmed.
+
+Status: If project is currently on 3.5.x < 3.5.6, upgrade to 3.5.6 to address above CVEs.
+        No new 3.5.x release or CVE found since April 7, 2026.
+
+Note: Jira ticket I38-206 could not be fetched (network policy blocks splashtop.atlassian.net).
+      Exact upgrade target version and last review date are unavailable; update ticket manually.
+
 === 2026-06-05 01:09 UTC ===
 Last review: 2026-06-04 (prior log entry; Jira API blocked by sandbox egress policy)
 Target: OpenSSL 3.5.x
