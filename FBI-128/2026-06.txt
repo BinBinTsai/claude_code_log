@@ -1,3 +1,25 @@
+=== 2026-06-07 01:04 UTC ===
+Last review: 2026-06-06 (prior log entry; Jira API blocked by sandbox egress policy)
+
+Library          | Current (in use) | Latest Available    | CVE / Notes
+freerdp          | 3.25.0           | 3.26.0 (2026-05-06) | No new release. Upgrade still pending (fixes CVE-2026-44420/44421/44422/44422, CVE-2026-45700).
+libvpx           | 1.16.0           | 1.16.0              | No changes. CVE-2026-2447, CVE-2026-1861 still tracked.
+FFmpeg           | 7.1.2            | 8.1.1               | No new release. Upgrade URGENT: CVE-2026-40962 (CVSS 9.8) and others unpatched on 7.1.2.
+libwebsockets    | 4.5.8            | 4.5.8               | No changes. CVE-2026-10650 (DoS) still active; monitor for 4.5.9.
+libcurl          | 8.19.0           | 8.20.0              | NEW: curl 8.21.0 scheduled 2026-06-24 with one low-severity CVE (details embargoed until release). Upgrade to 8.20.0 still urgent (CVE-2026-6276).
+minizip-ng       | 4.1.1            | 4.2.1               | No changes. Upgrade to 4.2.1 still pending.
+libwebm          | 1.0.0.32         | 1.0.0.32            | No changes.
+AMF              | 1.5.0            | 1.5.2               | No changes.
+Opus             | 1.6.1            | 1.6.1               | No changes.
+x264             | r3222            | r3223               | No changes.
+CUDA Toolkit     | 13.2.1           | 13.3.0 (2026-05-27) | No changes. No security CVEs.
+NV Codec SDK     | 13.0             | 13.0.19             | No changes.
+zlib             | 1.3.2            | 1.3.2               | No changes.
+libssh           | 0.11.x/0.12.0   | 0.12.0              | No changes. CVE-2026-0964/0965/0966/0968 still tracked.
+
+Note: Jira ticket FBI-128 inaccessible (sandbox egress policy blocks splashtop.atlassian.net).
+      Versions carried from 2026-06-05 log entry. New item: curl 8.21.0 releasing 2026-06-24.
+
 === 2026-06-06 01:06 UTC ===
 Last review: N/A (Jira splashtop.atlassian.net unreachable from agent network — host not in allowlist)
 
