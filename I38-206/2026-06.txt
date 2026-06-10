@@ -1,3 +1,17 @@
+=== 2026-06-10 01:06 UTC ===
+Last review: 2026-06-09 (prior log entry; Jira API blocked by sandbox egress policy)
+Target: OpenSSL 3.5.x
+
+No new OpenSSL 3.5.x releases or CVEs found since last review (2026-06-09).
+Latest: 3.5.6 (released 2026-04-07). All known CVEs addressed in 3.5.6:
+  CVE-2026-28387/28388/28389/28390, CVE-2026-31789/31790, CVE-2026-2673
+  CVE-2025-11187 (stack overflow PKCS#12, HIGH — fixed in 3.5.5+)
+  CVE-2025-15467 (stack overflow CMS/PKCS#7 AEAD, HIGH — fixed in 3.5.5+)
+Status: If on 3.5.6 — no action required. If on 3.5.x < 3.5.6 — upgrade immediately.
+Monitor: Next OpenSSL advisory window expected Q3 2026.
+
+Note: Jira ticket I38-206 inaccessible (sandbox egress policy blocks splashtop.atlassian.net).
+
 === 2026-06-09 01:06 UTC ===
 Last review: 2026-06-08 (prior log entry; Jira API blocked by sandbox egress policy)
 Target: OpenSSL 3.5.x
