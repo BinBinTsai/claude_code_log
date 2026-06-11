@@ -1,3 +1,26 @@
+=== 2026-06-11 01:06 UTC ===
+Last review: 2026-06-10 (prior log entry; Jira API blocked by sandbox egress policy)
+Target: OpenSSL 3.5.x
+
+NEW RELEASE: OpenSSL 3.5.7 released 2026-06-09 — ACTION REQUIRED.
+Previous tracked latest: 3.5.6 (2026-04-07). Upgrade target must move to 3.5.7.
+
+CVEs fixed in OpenSSL 3.5.7 (most severe = HIGH):
+  CVE-2026-45447  Heap use-after-free in PKCS7_verify()                        HIGH  — may allow remote code execution via crafted PKCS#7/S-MIME signed message
+  CVE-2026-34182  CMS AuthEnvelopedData processing accepts forged messages      MOD   — key-equivalent forgery via crafted CMS structures
+  CVE-2026-34183  Unbounded memory growth in QUIC PATH_CHALLENGE handler        MOD   — DoS via memory exhaustion
+  CVE-2026-42764  NULL pointer dereference in QUIC server initial packet handling MOD — DoS
+  CVE-2026-45445  AES-OCB IV ignored on EVP_Cipher() path                      MOD   — incorrect encryption output
+  CVE-2026-7383   Heap buffer overflow in ASN.1 multibyte string conversion     MOD   — memory corruption
+  CVE-2026-31789  Heap buffer overflow in hexadecimal conversion                MOD   — memory corruption (carried from 3.5.6 batch)
+
+Status: Upgrade to OpenSSL 3.5.7 immediately — CVE-2026-45447 (HIGH, potential RCE) is the
+        critical driver. Any system on 3.5.x < 3.5.7 is exposed.
+        OpenSSL 4.0.0 (released 2026-04-14) remains out of scope for this ticket.
+
+Note: Jira ticket I38-206 inaccessible (sandbox egress policy blocks splashtop.atlassian.net).
+      3.5.7 release date confirmed as 2026-06-09 per NVD/OpenSSL advisory.
+
 === 2026-06-10 01:06 UTC ===
 Last review: 2026-06-09 (prior log entry; Jira API blocked by sandbox egress policy)
 Target: OpenSSL 3.5.x
