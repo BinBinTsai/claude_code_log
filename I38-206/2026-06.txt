@@ -1,3 +1,15 @@
+=== 2026-06-12 01:04 UTC ===
+Last review: 2026-06-11 (prior log entry; Jira API blocked by sandbox egress policy)
+Target: OpenSSL 3.5.x
+
+No new OpenSSL 3.5.x releases or CVEs found since last review (2026-06-11).
+Latest: 3.5.7 (released 2026-06-09) — upgrade action still required (CVE-2026-45447 HIGH,
+        potential RCE; plus CVE-2026-34182/34183/42764/45445/7383 fixed in 3.5.7).
+Status: Any system on 3.5.x < 3.5.7 remains exposed. No 3.5.8 found. No new CVEs today.
+
+Note: Jira ticket I38-206 inaccessible (sandbox egress policy blocks splashtop.atlassian.net).
+      No new advisories or releases found since 2026-06-11.
+
 === 2026-06-11 01:06 UTC ===
 Last review: 2026-06-10 (prior log entry; Jira API blocked by sandbox egress policy)
 Target: OpenSSL 3.5.x
