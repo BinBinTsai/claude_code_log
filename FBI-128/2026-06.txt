@@ -1,3 +1,27 @@
+=== 2026-06-14 01:04 UTC ===
+Last review: 2026-06-12 (prior log entry; Jira API blocked by sandbox egress policy)
+
+Library          | Current (in use) | Latest Available    | CVE / Notes
+freerdp          | 3.25.0           | 3.26.0 (2026-05-06) | No changes. Upgrade to 3.26.0 still pending (CVE-2026-44420/44421/44422/45700).
+libvpx           | 1.16.0           | 1.16.0              | No changes. CVE-2026-2447, CVE-2026-1861 still tracked.
+FFmpeg           | 7.1.2            | 8.1.1               | No changes. 21 zero-days (CVE-2026-39210..39218 + 12 unassigned) still unpatched on 7.1.2. UPGRADE CRITICAL.
+libwebsockets    | 4.5.8            | 4.5.8               | No changes. CVE-2026-10650 (DoS, CVSS 6.9) still active; patch commit 3f9f0c6 available but not in versioned release.
+libcurl          | 8.19.0           | 8.20.0              | No changes. curl 8.21.0 still expected 2026-06-24 (10 days; low-severity CVE to publish at release). Upgrade to 8.20.0 still urgent (CVE-2026-6276).
+minizip-ng       | 4.1.1            | 4.2.1               | No changes. Upgrade pending.
+libwebm          | 1.0.0.32         | 1.0.0.32            | No changes.
+AMF              | 1.5.0            | 1.5.2               | No changes. Upgrade pending (requires Adrenalin 26.5.1+ driver).
+Opus             | 1.6.1            | 1.6.1               | No changes.
+x264             | r3222            | r3223               | No changes.
+CUDA Toolkit     | 13.2.1           | 13.3.0 (2026-05-27) | No changes. No security CVEs.
+NV Codec SDK     | 13.0             | 13.0.19             | No changes.
+zlib             | 1.3.2            | 1.3.2               | No changes. CVE-2026-22184 (CVSS 9.3), CVE-2026-3381, CVE-2026-27820 tracked; monitoring for 1.3.3.
+libssh           | 0.11.4           | 0.12.0              | No changes. CVE-2026-0968/CVE-2025-5372 still tracked. Upgrade to 0.12.0 pending.
+
+Note: Jira ticket FBI-128 inaccessible (sandbox egress policy blocks splashtop.atlassian.net).
+      Versions carried from 2026-06-12 log entry. No new releases or CVEs found since 2026-06-12.
+      Watch: curl 8.21.0 releasing 2026-06-24 with embargoed low-severity CVE (10 days).
+      zlib CVE-2026-3381 and CVE-2026-27820 identified this run (pre-June-12, not previously logged).
+
 === 2026-06-12 01:04 UTC ===
 Last review: 2026-06-11 (prior log entry; Jira API blocked by sandbox egress policy)
 
