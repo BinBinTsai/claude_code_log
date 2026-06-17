@@ -1,3 +1,27 @@
+=== 2026-06-17 01:04 UTC ===
+Last review: UNKNOWN — Jira inaccessible (splashtop.atlassian.net blocked by network egress policy)
+Target: OpenSSL 3.5.x (version from ticket unavailable)
+
+New releases since last check:
+  - OpenSSL 3.5.7 (~2026-06-10): HIGH severity security patch release
+  - OpenSSL 3.5.6 (2026-04-07): Moderate severity security patch release
+
+CVEs fixed in OpenSSL 3.5.7 (HIGH):
+  CVE-2026-45447  — Heap use-after-free in PKCS7_verify()
+  CVE-2026-34182  — CMS AuthEnvelopedData forged message acceptance
+  CVE-2026-34183  — Unbounded memory growth in QUIC PATH_CHALLENGE handler
+  CVE-2026-42764  — NULL pointer dereference in QUIC server initial packet handling
+  CVE-2026-45445  — AES-OCB IV ignored on EVP_Cipher() path
+  CVE-2026-7383   — Possible heap buffer overflow in ASN.1 multibyte string conversion
+  CVE-2026-9076   — Out-of-bounds read in CMS password-based decryption
+  CVE-2026-34180  — Heap buffer over-read in ASN.1 content parsing
+  (additional) PKCS#12 files with PBMAC1 accepted with short HMAC keys
+
+CVEs fixed in OpenSSL 3.5.6 (Moderate — from April 2026 batch):
+  See https://openssl-library.org/post/2026-04-07-release-announcement/ for full list
+
+ACTION REQUIRED: Jira ticket I38-206 could not be read — current upgrade target version unknown. OpenSSL 3.5.7 contains a HIGH severity CVE batch; if target is below 3.5.7, upgrade should be prioritized.
+
 === 2026-06-16 01:04 UTC ===
 Last review: 2026-06-15 (prior log entry; Jira API blocked by sandbox egress policy)
 Target: OpenSSL 3.5.x
