@@ -1,3 +1,27 @@
+=== 2026-06-18 01:05 UTC ===
+Last review: 2026-06-17 (prior log entry; Jira API blocked by sandbox egress policy)
+
+Library          | Current (in use) | Latest Available    | CVE / Notes
+freerdp          | 3.25.0           | 3.27.0 (2026-06-15) | No changes. Upgrade to 3.27.0 still pending (TLS 1.2 min, password hash improvements).
+libvpx           | 1.16.0           | 1.16.0              | No changes. CVE-2026-2447 (CVSS 8.8 HIGH), CVE-2026-1861 still tracked.
+FFmpeg           | 7.1.2            | 8.1.2 (2026-06-17)  | NEW RELEASE: 8.1.2 released 2026-06-17 (maintenance release from 8.1 branch). 21 zero-days (CVE-2026-39210..39218 + 12 unassigned) still unpatched on 7.1.2. UPGRADE CRITICAL.
+libwebsockets    | 4.5.8            | 4.5.8               | No changes. CVE-2026-10650 (DoS, CVSS 6.9) still active; patch commit 3f9f0c6 not yet in versioned release.
+libcurl          | 8.19.0           | 8.20.0              | No changes. curl 8.21.0 still expected 2026-06-24 (6 days; low-severity CVE to publish at release). Upgrade to 8.20.0 still urgent (CVE-2026-6276).
+minizip-ng       | 4.1.1            | 4.2.1               | No changes. Upgrade pending.
+libwebm          | 1.0.0.32         | 1.0.0.32            | No changes.
+AMF              | 1.5.0            | 1.5.2               | No changes. Upgrade pending (requires Adrenalin 26.5.1+ driver).
+Opus             | 1.6.1            | 1.6.1               | No changes.
+x264             | r3222            | r3223               | No changes. ShiftMediaProject repo archived 2026-01-26.
+CUDA Toolkit     | 13.2.1           | 13.3.0 (2026-05-27) | No changes. No security CVEs.
+NV Codec SDK     | 13.0             | 13.0.19             | No changes.
+zlib             | 1.3.2            | 1.3.2               | No changes. CVE-2026-22184/3381/27820 still tracked; no 1.3.3 released.
+libssh           | 0.11.4           | 0.12.0              | No changes. CVE-2026-0968/CVE-2025-5372 still tracked. CVE-2026-3731 (Medium, CVSS 5.3, OOB read in SFTP extension handler) — fixed in 0.11.4+, so current version is not exposed.
+
+Note: Jira ticket FBI-128 inaccessible (sandbox egress policy blocks splashtop.atlassian.net).
+      Versions carried from 2026-06-16 log entry.
+      NEW: FFmpeg 8.1.2 released 2026-06-17 — latest stable updated from 8.1.1. Maintenance release.
+      Watch: curl 8.21.0 releasing 2026-06-24 with embargoed low-severity CVE (6 days).
+
 === 2026-06-17 01:04 UTC ===
 Last review: UNKNOWN — Jira inaccessible (splashtop.atlassian.net blocked by network egress policy)
 
