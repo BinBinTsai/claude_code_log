@@ -1,3 +1,13 @@
+=== 2026-06-22 01:04 UTC ===
+Last review: 2026-06-21 (prior log entry; Jira API blocked by sandbox egress policy)
+Target: OpenSSL 3.5.x
+
+No new OpenSSL 3.5.x releases or CVEs found since last review (2026-06-21).
+Latest: 3.5.7 (released 2026-06-09) — upgrade action still required for any deployment below 3.5.7.
+No 3.5.8 found. No new advisories.
+Critical CVEs in 3.5.7 still unresolved if below that version: CVE-2026-45447 (HIGH, heap UAF in PKCS7_verify),
+  CVE-2026-34182/34183/42764/45445 (QUIC/CMS/AES-OCB), CVE-2026-7383/9076/34180 (ASN.1/CMS).
+
 === 2026-06-21 01:03 UTC ===
 Last review: 2026-06-20 (prior log entry; Jira API blocked by sandbox egress policy)
 Target: OpenSSL 3.5.x
