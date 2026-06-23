@@ -1,3 +1,31 @@
+=== 2026-06-23 01:04 UTC ===
+Last review: N/A — Jira ticket I38-206 inaccessible (host splashtop.atlassian.net blocked by network egress policy)
+Target: OpenSSL 3.5.x (exact upgrade target version unreadable from ticket)
+
+NOTE: Version baseline and last-review date could not be read from ticket.
+      Results below are based on public web search for OpenSSL 3.5.x releases/CVEs in 2026.
+
+New releases since last known check:
+  OpenSSL 3.5.6 — Moderate severity fixes:
+    CVE-2026-31790  Incorrect failure handling in RSA KEM RSASVE encapsulation
+    CVE-2026-2673   Loss of key agreement group tuple structure
+    CVE-2026-28387  Potential use-after-free in DANE client code
+    CVE-2026-28388  NULL ptr deref when processing delta CRL
+    CVE-2026-28389  NULL ptr deref in CMS KeyAgreeRecipientInfo
+    CVE-2026-31789  Heap buffer overflow in hexadecimal conversion
+
+  OpenSSL 3.5.7 — HIGH severity fixes (most critical release):
+    CVE-2026-45447  Heap use-after-free in PKCS7_verify() — HIGH
+    CVE-2026-34182  CMS AuthEnvelopedData accepts forged messages
+    CVE-2026-34183  Unbounded memory growth in QUIC PATH_CHALLENGE handler
+    CVE-2026-42764  NULL ptr deref in QUIC server initial packet handling
+    CVE-2026-45445  AES-OCB IV ignored
+    CVE-2026-7383   Heap buffer overflow in ASN.1 multibyte string conversion
+    (plus) OOB read in CMS password-based decryption (CVE not confirmed)
+
+RECOMMENDATION: If tracking OpenSSL 3.5.x, upgrade target should be at minimum 3.5.7.
+ACTION REQUIRED: Verify current upgrade target in ticket once Jira access is restored.
+
 === 2026-06-22 01:04 UTC ===
 Last review: 2026-06-21 (prior log entry; Jira API blocked by sandbox egress policy)
 Target: OpenSSL 3.5.x
