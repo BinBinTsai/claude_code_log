@@ -1,3 +1,21 @@
+=== 2026-06-27 01:10 UTC ===
+Last review: 2026-06-23 (Jira still inaccessible — splashtop.atlassian.net blocked by network egress policy)
+Target: OpenSSL 3.5.x
+
+No new OpenSSL 3.5.x releases or CVEs found since last review (2026-06-23).
+Latest: 3.5.7 (released 2026-06-09) — no 3.5.8 found. No new advisories since June 23.
+
+Outstanding CVEs still requiring upgrade to 3.5.7 if not yet applied:
+  CVE-2026-45447  Heap use-after-free in PKCS7_verify()                   HIGH
+  CVE-2026-34182  CMS AuthEnvelopedData accepts forged messages            MOD
+  CVE-2026-34183  Unbounded memory growth in QUIC PATH_CHALLENGE handler   MOD
+  CVE-2026-42764  NULL ptr deref in QUIC server initial packet handling    MOD
+  CVE-2026-45445  AES-OCB IV ignored on EVP_Cipher() path                 MOD
+  CVE-2026-7383   Heap buffer overflow in ASN.1 multibyte string conv.     MOD
+  CVE-2026-9076   Out-of-bounds read in CMS password-based decryption      MOD
+
+Status: Upgrade target should be OpenSSL 3.5.7. No action required if already on 3.5.7.
+
 === 2026-06-23 01:04 UTC ===
 Last review: N/A — Jira ticket I38-206 inaccessible (host splashtop.atlassian.net blocked by network egress policy)
 Target: OpenSSL 3.5.x (exact upgrade target version unreadable from ticket)
