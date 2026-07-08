@@ -1,0 +1,28 @@
+=== 2026-07-08 01:03 UTC ===
+NOTE: Jira FBI-128 inaccessible from this session (proxy egress policy blocked splashtop.atlassian.net).
+      Current library versions from ticket unavailable; last review date unknown.
+      All "Current (Jira)" values below require manual verification against ticket.
+
+Library       | Current (Jira) | Latest Available      | CVE / Notes
+--------------|----------------|-----------------------|---------------------------------------------------------------
+freerdp       | N/A (see Jira) | 3.28.0 (2026-07-06)  | CVE-2026-57156, CVE-2026-57157, CVE-2026-57158 patched in 3.28.0
+libvpx        | N/A (see Jira) | 1.15.0               | CVE-2026-2447 (heap overflow, DoS/RCE); CVE-2026-1861 (heap overflow, Chrome/Firefox)
+FFmpeg        | N/A (see Jira) | 8.1.2                | CVE-2026-8461 PixelSmash (CVSS 8.8, heap OOB in MagicYUV); CVE-2026-39210–39218 (9 AI-found zero-days)
+libwebsockets | N/A (see Jira) | 4.3.5                | CVE-2025-11677 (UAF in lws_handshake_server), CVE-2025-11678 (stack overflow in lws_adns_parse_label)
+libcurl       | N/A (see Jira) | 8.21.0 (2026-06-24)  | 18 CVEs patched; CVE-2026-8932 (25-yr mTLS auth bypass), CVE-2026-8925 (double-free), CVE-2026-9547 (host validation)
+minizip       | N/A (see Jira) | 4.2.1 (2026-05-01)   | No CVEs found
+libwebm       | N/A (see Jira) | No 2026 release found | No CVEs found
+AMF           | N/A (see Jira) | 1.5.2                | No CVEs; requires AMD Adrenalin 26.10.07.01+, FFmpeg updated to 8.0.1
+Opus          | N/A (see Jira) | 1.6.1 (2026-01-14)   | No significant CVEs
+x264          | N/A (see Jira) | Upstream VideoLAN    | ShiftMediaProject/x264 mirror archived 2026-01-26 (read-only); use upstream
+CUDA          | N/A (see Jira) | 13.3.1 (2026-06-29)  | No security CVEs found
+NV Codec SDK  | N/A (see Jira) | 13.0 (Blackwell)     | No CVEs found; adds Jetson Thor, YUV 4:2:2 encode
+zlib          | N/A (see Jira) | 1.3.1.2              | CVE-2026-22184 (overflow in untgz utility only; core library unaffected)
+libssh        | N/A (see Jira) | N/A                  | libssh2 has CVE-2026-55200 (CVSS 9.2 RCE), CVE-2026-55199 (CVSS 8.2 DoS), CVE-2025-15661 (CVSS 8.3); confirm if libssh or libssh2 is used
+
+Action items:
+- Update freerdp to 3.28.0 if not already (3 CVEs patched 2026-07-06)
+- Evaluate FFmpeg 8.1.2 upgrade (CVE-2026-8461, CVSS 8.8)
+- Evaluate libcurl 8.21.0 upgrade (18 CVEs including auth bypass)
+- Confirm libssh vs libssh2 usage; if libssh2, CVE-2026-55200 is critical (CVSS 9.2)
+

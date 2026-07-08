@@ -1,0 +1,29 @@
+=== 2026-07-08 01:03 UTC ===
+NOTE: Jira I38-206 inaccessible from this session (proxy egress policy blocked splashtop.atlassian.net).
+      Target OpenSSL version and last review date from ticket unavailable; verify manually.
+Target: OpenSSL 3.5.x (exact target version from ticket unknown)
+
+Latest OpenSSL 3.5 release: 3.5.7 (released after 2026-04-07; exact date TBD)
+
+CVEs fixed in OpenSSL 3.5.7 (most severe: High):
+- CVE-2026-45447: Heap use-after-free in PKCS7_verify() [High]
+- CVE-2026-45445: AES-OCB IV ignored on EVP_Cipher() path [High]
+- CVE-2026-34182: CMS AuthEnvelopedData processing accepts forged messages
+- CVE-2026-34183: Unbounded memory growth in QUIC PATH_CHALLENGE handler
+- CVE-2026-42764: NULL ptr deref in QUIC server initial packet handling
+- CVE-2026-7383:  Possible heap buffer overflow in ASN.1 multibyte string conversion
+- CVE-2026-9076:  Out-of-bounds read in CMS password-based decryption
+- CVE-2026-34180: Heap buffer over-read in ASN.1 content parsing
+- CVE-2026-34181: PKCS#12 files with PBMAC1 accepted with short HMAC keys
+
+CVEs fixed in OpenSSL 3.5.6 (released 2026-04-07, most severe: Moderate):
+- CVE-2026-31790: Incorrect failure handling in RSA KEM RSASVE encapsulation
+- CVE-2026-2673:  Loss of key agreement group tuple structure
+- CVE-2026-28387: Potential UAF in DANE client code
+- CVE-2026-28388: NULL ptr deref processing delta CRL
+- CVE-2026-28389: NULL deref processing CMS KeyAgreeRecipientInfo
+- CVE-2026-31789: Heap buffer overflow in hexadecimal conversion
+
+Recommendation: Upgrade to OpenSSL 3.5.7 to address 2 High severity CVEs
+(CVE-2026-45447, CVE-2026-45445). If already at 3.5.6, this is a mandatory upgrade.
+
