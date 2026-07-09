@@ -1,3 +1,31 @@
+=== 2026-07-09 01:11 UTC ===
+NOTE: Jira FBI-128 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
+Last review: N/A (from ticket — see yesterday's entry 2026-07-08)
+
+Library       | Current (Jira) | Latest Available         | New since 2026-07-08 / CVE Notes
+--------------|----------------|--------------------------|------------------------------------------------------------------
+freerdp       | N/A (see Jira) | 3.28.0 (2026-07-06)     | No new release. 6 CVEs from 3.28.0 advisory pending MITRE assignment — NVD entries may appear imminently. Monitor FreeRDP/FreeRDP security advisories.
+libvpx        | N/A (see Jira) | 1.16.0 (2026-01-06)     | No new release. v1.17.0-rc1 exists (2026-06-24, RC only). No new CVEs.
+FFmpeg        | N/A (see Jira) | 8.1.2 (2026-07-06)      | No new release. No new CVEs.
+libwebsockets | N/A (see Jira) | 4.5.8 (2026-03-27)      | No new release. No new CVEs. (Correction: latest is 4.5.8, not 4.3.5 as previously logged)
+libcurl       | N/A (see Jira) | 8.21.0 (2026-06-24)     | No new release. No new CVEs. curl "Summer of Bliss" — HackerOne intake closed until 2026-08-03.
+minizip       | N/A (see Jira) | 4.2.2 (2024-06-30)      | No new release. No new CVEs.
+libwebm       | N/A (see Jira) | commit-based (no tags)   | No new release. No new CVEs.
+AMF           | N/A (see Jira) | 1.5.2                    | No new release. No new CVEs.
+Opus          | N/A (see Jira) | 1.6.1 (2026-01-14)      | No new release. No new CVEs.
+x264          | N/A (see Jira) | commit-based (no tags)   | No new release. No new CVEs.
+CUDA          | N/A (see Jira) | 13.3.1 (2026-06-29)     | No new release. No new CVEs.
+NV Codec SDK  | N/A (see Jira) | 13.1 (~2026-01)          | No new release. No new CVEs. (Correction: 13.1 exists, newer than previously logged 13.0)
+zlib          | N/A (see Jira) | 1.3.2 (2026-02-17)      | No new release. No new CVEs. (Note: if still on 1.3.1.2, upgrade to 1.3.2 — fixes CVE-2026-22184 CVSS 9.3)
+libssh2       | N/A (see Jira) | 1.11.1 (2024-10-16)     | NEW CVE: CVE-2026-58050 (CVSS 8.3 High, pub. 2026-06-28) — integer overflow in publickey subsystem attribute allocation; public PoC released; no patched release yet (1.11.2 in dev, untagged).
+
+Action items:
+- libssh2 CVE-2026-58050 (CVSS 8.3, public PoC, no patch yet): assess exposure; monitor 1.11.2 release
+- FreeRDP: 6 CVEs from 3.28.0 advisory pending MITRE assignment — watch for NVD entries
+- zlib: If still on 1.3.1.2, upgrade to 1.3.2 (CVE-2026-22184, CVSS 9.3, fixed in 1.3.2)
+- libwebsockets: Correct Jira baseline to 4.5.8 (not 4.3.5)
+- NV Codec SDK: Correct Jira baseline to 13.1 (not 13.0)
+
 === 2026-07-08 01:03 UTC ===
 NOTE: Jira FBI-128 inaccessible from this session (proxy egress policy blocked splashtop.atlassian.net).
       Current library versions from ticket unavailable; last review date unknown.
@@ -25,4 +53,3 @@ Action items:
 - Evaluate FFmpeg 8.1.2 upgrade (CVE-2026-8461, CVSS 8.8)
 - Evaluate libcurl 8.21.0 upgrade (18 CVEs including auth bypass)
 - Confirm libssh vs libssh2 usage; if libssh2, CVE-2026-55200 is critical (CVSS 9.2)
-

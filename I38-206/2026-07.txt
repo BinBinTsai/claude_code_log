@@ -1,3 +1,13 @@
+=== 2026-07-09 01:11 UTC ===
+NOTE: Jira I38-206 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
+Last review: N/A (from ticket — see yesterday's entry 2026-07-08)
+Target: OpenSSL 3.5.x (exact target version from ticket unknown)
+
+No changes since 2026-07-08.
+Latest OpenSSL 3.5 release: 3.5.7 (released 2026-06-09) — unchanged.
+No new CVEs affecting OpenSSL 3.5.x disclosed since 2026-07-08.
+Next expected release window: September–October 2026.
+
 === 2026-07-08 01:03 UTC ===
 NOTE: Jira I38-206 inaccessible from this session (proxy egress policy blocked splashtop.atlassian.net).
       Target OpenSSL version and last review date from ticket unavailable; verify manually.
@@ -26,4 +36,3 @@ CVEs fixed in OpenSSL 3.5.6 (released 2026-04-07, most severe: Moderate):
 
 Recommendation: Upgrade to OpenSSL 3.5.7 to address 2 High severity CVEs
 (CVE-2026-45447, CVE-2026-45445). If already at 3.5.6, this is a mandatory upgrade.
-
