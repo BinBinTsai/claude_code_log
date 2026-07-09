@@ -4,7 +4,7 @@ Last review: N/A (from ticket — see yesterday's entry 2026-07-08)
 
 Library       | Current (Jira) | Latest Available         | New since 2026-07-08 / CVE Notes
 --------------|----------------|--------------------------|------------------------------------------------------------------
-freerdp       | N/A (see Jira) | 3.28.0 (2026-07-06)     | No new release. 6 CVEs from 3.28.0 advisory pending MITRE assignment — NVD entries may appear imminently. Monitor FreeRDP/FreeRDP security advisories.
+freerdp       | N/A (see Jira) | 3.28.0 (2026-07-06)     | CVE-2026-56297 (pub. 2026-07-08, boundary): UAF in dvcman_channel_close/dvcman_call_on_receive, race via DYNVC_DATA+DYNVC_CLOSE, fixed in 3.22.0+. 3 named CVEs from 3.28.0 (CVE-2026-57156: Orders Delta Points int overflow→heap OOB, High; CVE-2026-57157: OOB read camera enumerator, Moderate; CVE-2026-57158: heap OOB read planar RLE, Low). 6 further GHSAs pending CVE ID (4×High: crypto_rsa_common pre-auth heap overflow, rdpsnd double-free, MonitorIds double-free, Opus OOB write; 1×High: .rdp arg injection; 1×Moderate: ADPCM DoS).
 libvpx        | N/A (see Jira) | 1.16.0 (2026-01-06)     | No new release. v1.17.0-rc1 exists (2026-06-24, RC only). No new CVEs.
 FFmpeg        | N/A (see Jira) | 8.1.2 (2026-07-06)      | No new release. No new CVEs.
 libwebsockets | N/A (see Jira) | 4.5.8 (2026-03-27)      | No new release. No new CVEs. (Correction: latest is 4.5.8, not 4.3.5 as previously logged)
@@ -21,7 +21,8 @@ libssh2       | N/A (see Jira) | 1.11.1 (2024-10-16)     | NEW CVE: CVE-2026-580
 
 Action items:
 - libssh2 CVE-2026-58050 (CVSS 8.3, public PoC, no patch yet): assess exposure; monitor 1.11.2 release
-- FreeRDP: 6 CVEs from 3.28.0 advisory pending MITRE assignment — watch for NVD entries
+- FreeRDP CVE-2026-56297 (pub. 2026-07-08, UAF in dvcman): fixed in 3.22.0+; confirm running ≥3.22.0
+- FreeRDP: 6 GHSAs from 3.28.0 advisory (4×High) pending CVE ID — watch for NVD entries
 - zlib: If still on 1.3.1.2, upgrade to 1.3.2 (CVE-2026-22184, CVSS 9.3, fixed in 1.3.2)
 - libwebsockets: Correct Jira baseline to 4.5.8 (not 4.3.5)
 - NV Codec SDK: Correct Jira baseline to 13.1 (not 13.0)
