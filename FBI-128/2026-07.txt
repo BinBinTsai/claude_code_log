@@ -1,3 +1,33 @@
+=== 2026-07-13 01:02 UTC ===
+NOTE: Jira FBI-128 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
+Last review: N/A (from ticket — see prior entries)
+
+No new library releases or CVEs since 2026-07-10.
+
+Library       | Latest (confirmed)              | Status vs. 2026-07-10
+--------------|---------------------------------|-----------------------------------------------------------
+freerdp       | 3.28.0 (2026-07-06)             | No change. From 3.28.0 advisory: CVE-2026-57156/57157/57158 confirmed; GHSA-jp7m-94ww-p56r, GHSA-h23r-3988-3wf3, GHSA-8f2g-3q27-6xm5, GHSA-8jgr-7r33-x87w still pending NVD IDs.
+libvpx        | 1.16.0 (2026-01-06)             | No change. v1.17.0-rc1 still RC-only.
+FFmpeg        | 8.1.2 (2026-06-17)              | No change.
+libwebsockets | 4.5.8 (2026-03-27)              | No change.
+libcurl       | 8.21.0 (2026-06-24)             | No change. HackerOne intake closed until 2026-08-03. Next release planned 2026-09-02.
+minizip       | 4.2.2 (2024-06-30)              | No change.
+libwebm       | 1.0.0.32 / commit-based         | No change.
+AMF           | 1.5.2                            | No change.
+Opus          | 1.6.1 (2026-01-14)              | No change.
+x264          | commit-based (no tags)           | No change.
+CUDA          | 13.3.1 (2026-06-29)             | No change.
+NV Codec SDK  | 13.1 (~2026-01)                 | No change.
+zlib          | 1.3.2 (2026-02-17)              | No change.
+libssh2       | 1.11.1 (official tagged)        | No change. 1.11.2 still untagged; CVE-2026-55200 (CVSS 9.2) and CVE-2026-58050 (CVSS 8.3) unpatched in any official release.
+
+Outstanding action items (carry-forward from 2026-07-10):
+- libssh2 CVE-2026-55200 (CVSS 9.2 RCE, public PoC 2026-06-29) and CVE-2026-58050 (CVSS 8.3): monitor for 1.11.2 official tag
+- FreeRDP: 4 GHSAs from 3.28.0 advisory still pending NVD CVE IDs (ADPCM/image decoders); watch for assignments
+- zlib: If still on ≤1.3.1.2, upgrade to 1.3.2 (CVE-2026-22184, CVSS 9.3)
+- libwebsockets: Confirm Jira baseline is 4.5.8 (not 4.3.5)
+- NV Codec SDK: Confirm Jira baseline is 13.1 (not 13.0)
+
 === 2026-07-10 01:02 UTC ===
 NOTE: Jira FBI-128 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
 Last review: N/A (from ticket — see prior entries)
