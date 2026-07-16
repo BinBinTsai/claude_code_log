@@ -1,3 +1,33 @@
+=== 2026-07-16 01:02 UTC ===
+NOTE: Jira FBI-128 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
+Last review: N/A (from ticket — see prior entries)
+
+ACTION REQUIRED: libwebsockets CVE-2026-10650 newly identified (Medium, resource exhaustion).
+FreeRDP 3.29.0 (reported 2026-07-15) remains the latest — no newer release found.
+
+Library       | Latest (confirmed)              | Status vs. 2026-07-15
+--------------|---------------------------------|-----------------------------------------------------------
+freerdp       | 3.29.0 (2026-07-14 per GitHub)  | No change. 3.29.0 confirmed latest on GitHub releases page. No new CVEs or GHSAs since 2026-07-15.
+libvpx        | 1.16.0 (2026-01-06)             | No change. No new release. No new CVEs.
+FFmpeg        | 8.1.2 (2026-06-17)              | No change. Only git/dev builds published after 8.1.2. No new stable release or CVEs.
+libwebsockets | 4.5.8 (2026-03-30)              | NEW CVE: CVE-2026-10650 (CVSS 4.0: 6.9 Medium) — resource consumption via lws_ssh_parse_plaintext in SSH Protocol Handler; no new formal release yet, patch committed to upstream repo. Monitor for 4.5.9 tag.
+libcurl       | 8.21.0 (2026-06-24)             | No change. HackerOne intake closed until 2026-08-03. Next: 8.22.0 on 2026-09-02.
+minizip       | 4.2.2 (2024-06-30)              | No change.
+libwebm       | 1.0.0.32 / commit-based         | No change.
+AMF           | 1.5.2                            | No change.
+Opus          | 1.6.1 (2026-01-14)              | No change. No new releases or CVEs.
+x264          | commit-based (no tags)           | No change.
+CUDA          | 13.3.1 / Update 1 (2026-06-29)  | No change. No new security bulletin for July 2026 found.
+NV Codec SDK  | 13.1 (~2026-01)                 | No change. No new security advisories found.
+zlib          | 1.3.2 (2026-02-17)              | No change. CVE-2026-27171 (CPU exhaustion in CRC combine) affects <1.3.2; already fixed in 1.3.2.
+libssh2       | 1.11.1 (official tagged)        | No change. 1.11.2 still NOT officially tagged (master shows "1.11.2_DEV"). CVE-2026-55200 (CVSS 9.2 RCE) and CVE-2026-58050 (CVSS 8.3) remain unpatched in any official release.
+
+Outstanding action items:
+- URGENT: FreeRDP 3.29.0 — security release with ~22 advisories (released 2026-07-13/14); assess impact vs. current baseline and upgrade
+- libssh2 CVE-2026-55200 (CVSS 9.2 RCE) and CVE-2026-58050 (CVSS 8.3): monitor for 1.11.2 official tag; consider applying upstream commits directly
+- libwebsockets CVE-2026-10650 (CVSS 6.9, Medium): resource exhaustion via SSH handler; monitor for 4.5.9 release
+- zlib: If still on ≤1.3.1.2, upgrade to 1.3.2 (CVE-2026-22184 CVSS 9.3; CVE-2026-27171 DoS)
+
 === 2026-07-15 01:02 UTC ===
 NOTE: Jira FBI-128 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
 Last review: N/A (from ticket — see prior entries)

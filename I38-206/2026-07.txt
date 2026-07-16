@@ -1,3 +1,13 @@
+=== 2026-07-16 01:02 UTC ===
+NOTE: Jira I38-206 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
+Last review: N/A (from ticket — see prior entries)
+Target: OpenSSL 3.5.x (exact target version from ticket unknown)
+
+No changes since 2026-07-15.
+Latest OpenSSL 3.5 release: 3.5.7 (2026-06-09) — unchanged. No 3.5.8 release found.
+No new CVEs affecting OpenSSL 3.5.x disclosed since 2026-07-15.
+Next expected release window: September–October 2026.
+
 === 2026-07-15 01:02 UTC ===
 NOTE: Jira I38-206 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
 Last review: N/A (from ticket — see prior entries)
