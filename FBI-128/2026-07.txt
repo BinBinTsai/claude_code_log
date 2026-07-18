@@ -1,3 +1,30 @@
+=== 2026-07-18 01:08 UTC ===
+NOTE: Jira FBI-128 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
+Last review: 2026-07-17 (prior log entry)
+
+No new releases or CVEs found since 2026-07-17.
+
+Library       | Latest (confirmed)              | Status vs. 2026-07-17
+--------------|---------------------------------|-----------------------------------------------------------
+freerdp       | 3.30.0 (2026-07-16)             | No change. 3.30.0 remains latest. No new GHSAs or CVEs published after 2026-07-17.
+libvpx        | 1.16.0 (2026-01-06)             | No change. v1.17.0-rc1 (2026-06-24) still RC-only. No new CVEs.
+FFmpeg        | 8.1.2 (2026-06-17)              | No change. n8.2-dev is master-only. No new stable release or CVEs.
+libwebsockets | 4.5.8 (2026-03-27)              | No change. No 4.5.9 tag. CVE-2026-10650 (CVSS 6.9, Medium) still unpatched in any release; patch commit exists in repo only.
+libcurl       | 8.21.0 (2026-06-24)             | No change. HackerOne intake closed until 2026-08-03. Next: 8.22.0 on 2026-09-02.
+minizip-ng    | 4.2.2 (2026-06-30)              | No change. Security fix (symlink escape) included in 4.2.2. No new CVEs.
+libwebm       | 1.0.0.32 / commit-based         | No change.
+AMF           | 1.5.2 (2025-05-06)              | No change. No security advisories for AMF SDK.
+Opus          | 1.6.1 (2026-01-14)              | No change. No new releases or CVEs.
+x264          | commit-based (no tags)           | No change. No new security issues found.
+CUDA          | 13.3.1 / Update 1 (2026-06-29)  | No change. No new NVIDIA security bulletin since 2026-07-17.
+NV Codec SDK  | 13.1 (2026-01)                  | No change. No advisories.
+zlib          | 1.3.2 (2026-02-17)              | No change. CVE-2026-22184 (CVSS 9.3) fixed in 1.3.2. No new CVEs.
+libssh2       | 1.11.1 (2024-10-16, official)   | No change. 1.11.2 still NOT officially tagged (master "1.11.2_DEV"). CVE-2026-55200 (CVSS 9.2 RCE, public PoC since 2026-06-29) and CVE-2026-58050 (CVSS 8.3) remain unpatched in any official release. Distros backporting independently.
+
+Outstanding action items (carried forward):
+- CRITICAL: libssh2 CVE-2026-55200 (CVSS 9.2, pre-auth RCE) + CVE-2026-58050 (CVSS 8.3): public PoC exists; no official 1.11.2 tag yet — apply distro backport or cherry-pick commit 97acf3d from master (PR #2052)
+- MEDIUM: libwebsockets CVE-2026-10650 (CVSS 6.9): resource exhaustion; monitor for 4.5.9 release
+
 === 2026-07-17 01:02 UTC ===
 NOTE: Jira FBI-128 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
 Last review: N/A (from ticket — see prior entries)
