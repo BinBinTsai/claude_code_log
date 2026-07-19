@@ -1,3 +1,18 @@
+=== 2026-07-19 01:02 UTC ===
+NOTE: Jira I38-206 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
+Last review: 2026-07-18 (prior log entry)
+Target: OpenSSL 3.5.x (exact target version from ticket unknown)
+
+No changes since 2026-07-18.
+Latest OpenSSL 3.5 release: 3.5.7 (2026-06-09) — unchanged. No 3.5.8 release found.
+No new CVEs affecting OpenSSL 3.5.x disclosed since 2026-07-18.
+Next expected release window: September–October 2026.
+
+Known fixed CVEs in upgrade target 3.5.7 (carried forward for reference):
+- CVE-2026-45447 (HIGH) — heap use-after-free in PKCS7_verify(); fixed in 3.5.7
+- CVE-2026-45445 (HIGH) — AES-OCB IV ignored on EVP_Cipher() path; fixed in 3.5.7
+- CVE-2026-34183 (Moderate) — unbounded memory growth in QUIC PATH_CHALLENGE; fixed in 3.5.7
+
 === 2026-07-18 01:08 UTC ===
 NOTE: Jira I38-206 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
 Last review: 2026-07-17 (prior log entry)
