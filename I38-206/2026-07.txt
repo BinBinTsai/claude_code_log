@@ -1,3 +1,28 @@
+=== 2026-07-20 01:04 UTC ===
+NOTE: Jira ticket I38-206 could not be fetched — splashtop.atlassian.net blocked by egress policy (403).
+Last review: unknown (ticket inaccessible); searched for updates as of 2026-07-20.
+Target: OpenSSL 3.5.x (upgrade target from ticket)
+
+New releases since last known review:
+
+  OpenSSL 3.5.6 — released 2026-04-07
+    Most severe CVE: Moderate. Fixes RSA KEM, DANE client, CRL processing, CMS handling issues.
+
+  OpenSSL 3.5.7 — released 2026-06-09   *** LATEST ***
+    Most severe CVE: HIGH. Security patch release.
+    CVEs fixed:
+      CVE-2026-45447  Heap use-after-free in PKCS7_verify()
+      CVE-2026-34182  CMS AuthEnvelopedData processing issue
+      CVE-2026-34183  Unbounded memory growth in QUIC PATH_CHALLENGE handler
+      CVE-2026-42764  NULL pointer dereference in QUIC server initial packet handling
+      CVE-2026-45445  AES-OCB IV issues
+      CVE-2026-7383   Heap buffer overflow in ASN.1 string conversion
+      CVE-2026-31789  Out-of-bounds read in CMS password-based decryption
+
+ACTION: Upgrade target should be updated to OpenSSL 3.5.7. Multiple HIGH-severity CVEs
+affect earlier 3.5.x releases.
+
+
 === 2026-07-19 01:02 UTC ===
 NOTE: Jira I38-206 inaccessible (proxy egress policy blocks splashtop.atlassian.net).
 Last review: 2026-07-18 (prior log entry)
