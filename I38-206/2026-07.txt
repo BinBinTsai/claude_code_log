@@ -1,3 +1,28 @@
+=== 2026-07-21 01:02 UTC ===
+Last review: N/A (Jira I38-206 inaccessible — splashtop.atlassian.net blocked by egress proxy policy)
+Target: OpenSSL 3.5.x (upgrade target from ticket unavailable; monitoring 3.5 LTS branch)
+
+New releases since 2026-06-21:
+  No new 3.5.x release. Latest: OpenSSL 3.5.7 (released 2026-06-09, 12 days before window).
+  3.5 is current LTS branch, supported through 2030-04-08.
+
+CVEs / Disclosures:
+  CVE-2026-45447 | High (CVSS ~8.1-8.8) | Heap use-after-free in PKCS7_verify(); crafted S/MIME can cause heap corruption / RCE. No auth required. Fixed in 3.5.7 (2026-06-09) — just outside window but critical context.
+  CVE-2026-42764 | Moderate | NULL ptr deref in QUIC server initial packet handling (DoS). Fixed in 3.5.7.
+  CVE-2026-42765 | Moderate | Additional QUIC handling DoS. Fixed in 3.5.7.
+  CVE-2026-45445 | Moderate | AES-OCB IV ignored on EVP_Cipher() path (auth bypass risk). Fixed in 3.5.7.
+  CVE-2026-7383  | Moderate | Heap buffer overflow in ASN.1 multibyte string conversion. Fixed in 3.5.7.
+  CVE-2026-9076  | Moderate | OOB read in CMS password-based decryption. Fixed in 3.5.7.
+  CVE-2026-34180 | Moderate | Heap buffer over-read in ASN.1 content parsing. Fixed in 3.5.7.
+  CVE-2026-34182 | Moderate | CMS AuthEnvelopedData may accept forged messages. Fixed in 3.5.7.
+  CVE-2026-34183 | Moderate | Unbounded memory growth in QUIC PATH_CHALLENGE handler. Fixed in 3.5.7.
+  CVE-2026-31789 | Moderate | Heap buffer overflow on 32-bit platforms in X.509 cert processing. Fixed in 3.5.7.
+  "HollowByte"   | No CVE   | WITHIN WINDOW — disclosed 2026-07-18 (oss-security, Okta Red Team). TLS ClientHello with fraudulent length field causes OpenSSL to pre-allocate up to 131 KB/connection; exhausts server memory on glibc systems (DoS, unauthenticated remote). Silently fixed in 3.5.7 with no advisory or CVE. Defenders relying on CVE feeds would miss this. ACTION: verify all 3.5.x deployments are on 3.5.7+.
+
+Summary: Upgrade to 3.5.7 is mandatory. 10 CVEs (1 High/RCE-class) + 1 silent critical DoS fix. No 3.5.x release after June 21 during this window.
+
+NOTE: Jira ticket unavailable this run (proxy policy blocked splashtop.atlassian.net). Upgrade target version from ticket unknown; monitoring 3.5 LTS branch.
+
 === 2026-07-20 01:04 UTC ===
 NOTE: Jira ticket I38-206 could not be fetched — splashtop.atlassian.net blocked by egress policy (403).
 Last review: unknown (ticket inaccessible); searched for updates as of 2026-07-20.

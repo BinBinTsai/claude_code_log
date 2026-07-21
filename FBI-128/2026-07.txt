@@ -1,3 +1,24 @@
+=== 2026-07-21 01:02 UTC ===
+Last review: N/A (Jira FBI-128 inaccessible — splashtop.atlassian.net blocked by egress proxy policy)
+
+Library          | Current (ticket) | New Latest        | CVE / Notes
+freerdp          | unknown          | 3.28.0 (2026-07-06) | CVE-2026-57156 (RCE, integer overflow), CVE-2026-57157 (OOB read), CVE-2026-57158 (info disclosure) — all fixed in 3.28.0
+libvpx           | unknown          | 1.16.0 (2026-01-21) | No new CVEs since 2026-06-21
+FFmpeg           | unknown          | 8.1.2 (2026-06-17) | CVE-2026-8461 "PixelSmash" (CVSS 8.8) — heap OOB write in MagicYUV decoder, RCE risk; disclosed 2026-06-22, fixed in 8.1.2
+libwebsockets    | unknown          | ~4.5.x             | CVE-2026-10650 — resource exhaustion in SSH handler (CVSS 6.9)
+libcurl          | unknown          | 8.21.0 (2026-06-24) | 18 CVEs patched; highlights: CVE-2026-8932 (25-yr mTLS auth bypass), CVE-2026-8926 (password leak), CVE-2026-8925 (double-free), CVE-2026-11856 (Digest auth state leak)
+minizip          | unknown          | no new release     | No new CVEs
+libwebm          | unknown          | 1.0.0.32 (2026-04-23 last commit) | No new CVEs
+AMF              | unknown          | 1.5.2 (mid-2026)   | No new CVEs
+Opus             | unknown          | 1.6.1 (2026-01-14) | No new CVEs (CVE-2026-40614 is PJSIP's decoder, not upstream libopus)
+x264             | unknown          | r3222 (2026-02-05) | No new CVEs
+CUDA             | unknown          | 13.3.1 (2026-05-27) | No new CVEs
+NV Codec SDK     | unknown          | 13.0.19 (2025-01-30) | No new CVEs
+zlib             | unknown          | 1.3.2 (2026-02-17) | No new CVEs since 2026-06-21
+libssh/libssh2   | unknown          | libssh2 1.11.2 (2026-06-12) | CVE-2026-55200 (CVSS 9.2 CRITICAL) pre-auth RCE, PoC public 2026-06-29; CVE-2026-55199 (CVSS 8.2 DoS); libssh CVE-2026-0968 (SFTP heap over-read). Upgrade libssh2 immediately.
+
+NOTE: Jira ticket unavailable this run (proxy policy blocked splashtop.atlassian.net). Current versions from ticket unknown; "New Latest" reflects publicly available latest releases. Action required: verify installed versions against latest and patch critical items (libssh2, curl, FFmpeg, FreeRDP).
+
 === 2026-07-20 01:04 UTC ===
 NOTE: Jira ticket FBI-128 could not be fetched — splashtop.atlassian.net blocked by egress policy (403).
 Last review: unknown (ticket inaccessible); searched for updates as of 2026-07-20.
