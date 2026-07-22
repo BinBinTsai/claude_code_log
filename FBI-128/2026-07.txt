@@ -1,3 +1,21 @@
+=== 2026-07-22 01:02 UTC ===
+Last review: N/A (Jira FBI-128 inaccessible — splashtop.atlassian.net blocked by egress proxy policy)
+
+Notable new findings since 2026-07-21:
+- OpenSSL "HollowByte" (no CVE assigned) publicly disclosed 2026-07-18 via oss-security.
+  An 11-byte TLS request can drain 131 KB server memory permanently (DoS). Fix is
+  silently backported into OpenSSL 3.5.7, 3.6.3, 3.4.6, 3.0.21 (released 2026-06-09).
+  Impacts any component linking OpenSSL: libcurl, libwebsockets, libssh/libssh2.
+  Ensure all components are built against OpenSSL >= 3.5.7.
+- No new library releases or CVEs found beyond those already logged on 2026-07-21.
+
+Library          | New Latest        | CVE / Notes (cumulative)
+freerdp          | 3.28.0 (2026-07-06) | CVE-2026-57156/57157/57158 — fixed in 3.28.0 (see 2026-07-21 entry)
+FFmpeg           | 8.1.2 (2026-06-17) | CVE-2026-8461 "PixelSmash" CVSS 8.8 — fixed in 8.1.2 (see 2026-07-21 entry)
+libcurl          | 8.21.0 (2026-06-24) | 18 CVEs incl. CVE-2026-8932, CVE-2026-8926 (see 2026-07-21 entry); also HollowByte via OpenSSL link
+libssh2          | 1.11.2 (2026-06-12) | CVE-2026-55200 CVSS 9.2 CRITICAL, public PoC — still awaiting confirmation of Splashtop upgrade (see 2026-07-21 entry)
+OpenSSL (transitive) | 3.5.7 min req  | HollowByte (no CVE) disclosed 2026-07-18 — require >= 3.5.7 for all deps
+
 === 2026-07-21 01:02 UTC ===
 Last review: N/A (Jira FBI-128 inaccessible — splashtop.atlassian.net blocked by egress proxy policy)
 

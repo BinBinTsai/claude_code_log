@@ -1,3 +1,26 @@
+=== 2026-07-22 01:02 UTC ===
+Last review: N/A (Jira I38-206 inaccessible — splashtop.atlassian.net blocked by egress proxy policy)
+Target: OpenSSL 3.5.x (upgrade target from ticket; exact version unknown without Jira access)
+
+NEW since last check (2026-07-21):
+- "HollowByte" DoS vulnerability in OpenSSL publicly disclosed 2026-07-18 via oss-security.
+  An 11-byte TLS ClientHello can cause unbounded server memory allocation (no CVE issued;
+  OpenSSL treated as hardening improvement). Silently patched in OpenSSL 3.5.7 (2026-06-09).
+  CVSS: unrated by OpenSSL; independently assessed as HIGH severity (memory exhaustion DoS).
+  Action: if upgrade target is below 3.5.7, raise minimum to 3.5.7.
+
+Current 3.5.x status (as of 2026-07-22):
+- Latest 3.5.x release: 3.5.7 (2026-06-09)
+- No 3.5.8 detected yet (next OpenSSL release cadence ~Sept 2026)
+- 3.5.7 addresses 18 CVEs including:
+    CVE-2026-45447  PKCS7_verify() heap use-after-free
+    CVE-2026-34182  CMS AuthEnvelopedData forged-message acceptance
+    CVE-2026-34183  QUIC PATH_CHALLENGE unbounded memory growth (Moderate)
+    CVE-2026-42764  NULL deref in QUIC server initial packet handling
+  + HollowByte (no CVE) — DoS via 11-byte TLS request
+
+Recommendation: Upgrade target should be OpenSSL 3.5.7 or higher.
+
 === 2026-07-21 01:02 UTC ===
 Last review: N/A (Jira I38-206 inaccessible — splashtop.atlassian.net blocked by egress proxy policy)
 Target: OpenSSL 3.5.x (upgrade target from ticket unavailable; monitoring 3.5 LTS branch)
