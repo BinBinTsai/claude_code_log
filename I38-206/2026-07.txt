@@ -1,3 +1,21 @@
+=== 2026-07-25 01:02 UTC ===
+Last review: N/A (Jira I38-206 inaccessible — splashtop.atlassian.net blocked by egress proxy policy)
+Target: OpenSSL 3.5.x (upgrade target from ticket; exact version unknown without Jira access)
+
+No changes since 2026-07-24.
+
+Web searches performed for OpenSSL 3.5.x releases and CVEs published since 2026-07-24:
+- No new 3.5.x release (latest confirmed: 3.5.7, 2026-06-09)
+- No 3.5.8 detected
+- No new CVEs affecting OpenSSL 3.5.x found since 2026-07-24
+- HollowByte DoS (no CVE, disclosed 2026-07-18): patched in 3.5.7; requirement >= 3.5.7 unchanged
+- Next 3.5.x release expected ~September 2026 per OpenSSL cadence
+
+No changes.
+
+NOTE: Jira ticket unavailable (proxy blocks splashtop.atlassian.net). Upgrade target version
+from ticket unknown; monitoring 3.5 LTS branch.
+
 === 2026-07-24 01:05 UTC ===
 Last review: N/A (Jira I38-206 inaccessible — splashtop.atlassian.net blocked by egress proxy policy)
 Target: OpenSSL 3.5.x (upgrade target from ticket; exact version unknown without Jira access)
