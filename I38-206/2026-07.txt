@@ -1,3 +1,34 @@
+=== 2026-07-26 01:02 UTC ===
+Last review: UNKNOWN — Jira (splashtop.atlassian.net) blocked by network proxy (403); target version and last review date not retrieved from ticket.
+Target: OpenSSL 3.5.x (upgrade target from ticket — exact version not confirmed due to Jira access failure)
+
+OpenSSL 3.5.x status as of 2026-07-26:
+  Latest in 3.5 branch: 3.5.7 (released June 9, 2026)
+  Prior: 3.5.6 (released April 7, 2026)
+
+CVEs fixed in OpenSSL 3.5.7 (June 9, 2026) — HIGH severity:
+  CVE-2026-45447  | Heap use-after-free in PKCS7_verify()                             | HIGH
+  CVE-2026-34182  | CMS AuthEnvelopedData may accept forged messages                  | Moderate
+  CVE-2026-34183  | Unbounded memory growth in QUIC PATH_CHALLENGE handler            | Moderate
+  CVE-2026-42764  | NULL ptr deref in QUIC server initial packet handling              | Moderate
+  CVE-2026-45445  | AES-OCB IV ignored on EVP_Cipher() path                           | Moderate
+  CVE-2026-7383   | Heap buffer overflow in ASN.1 multibyte string conversion         | Moderate
+  CVE-2026-9076   | Out-of-bounds read in CMS password-based decryption               | Moderate
+  CVE-2026-34180  | Heap buffer over-read in ASN.1 content parsing                    | Moderate
+
+CVEs fixed in OpenSSL 3.5.6 (April 7, 2026) — Moderate:
+  CVE-2026-31790  | Incorrect failure handling in RSA KEM RSASVE encapsulation        | Moderate
+  CVE-2026-2673   | Loss of key agreement group tuple with DEFAULT keyword            | Moderate
+  CVE-2026-28387  | Potential use-after-free in DANE client code                      | Moderate
+  CVE-2026-28388  | NULL ptr deref processing delta CRL                               | Moderate
+  CVE-2026-28389  | NULL deref in CMS KeyAgreeRecipientInfo                           | Moderate
+  CVE-2026-28390  | NULL deref in CMS KeyTransportRecipientInfo                       | Moderate
+  CVE-2026-31789  | Heap buffer overflow in hexadecimal conversion                    | Moderate
+
+No new 3.5.x release since 3.5.7 (June 9). Current latest is 3.5.7.
+Recommendation: Ensure upgrade target is 3.5.7 or above. CVE-2026-45447 (PKCS7 UAF) is HIGH.
+NOTE: Jira access failed — confirm current pinned version manually.
+
 === 2026-07-25 01:02 UTC ===
 Last review: N/A (Jira I38-206 inaccessible — splashtop.atlassian.net blocked by egress proxy policy)
 Target: OpenSSL 3.5.x (upgrade target from ticket; exact version unknown without Jira access)
