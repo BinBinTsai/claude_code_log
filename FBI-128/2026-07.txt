@@ -1,3 +1,47 @@
+=== 2026-07-27 01:02 UTC ===
+Last review: 2026-07-26 (prior log entry; Jira API still blocked by sandbox egress policy)
+
+Notable new findings since 2026-07-26:
+- FreeRDP: Two new GHSAs publicly disclosed 2026-07-26 (embargo lifted): GHSA-vv64-95pc-vj9v
+  (Kerberos GSS Wrap-token EC field OOB decrypt, High) and GHSA-rqgv-grx4-xm6x (RDSTLS server
+  auth bypass, High). Both fixed in 3.30.0 (2026-07-16). No new unpatched CVEs.
+- libwebsockets: v5.0.0 tagged on GitHub 2026-07-26 (major version bump from 4.5.8). Expected
+  to include CVE-2026-10650 fix (patch commit 3f9f0c6). No formal release notes yet; review
+  API breaking changes before upgrading.
+- zlib: CVE-2026-22184 (CVSS 7.8–9.3) confirmed fixed in 1.3.2 — correcting prior "no fix"
+  log entries. Scope limited to contrib/untgz/untgz.c demo utility, not core library (disputed).
+
+Library          | Current (last known) | New Latest           | CVE / Notes
+-----------------|----------------------|----------------------|--------------------------------------------------------------
+FreeRDP          | 3.30.0               | 3.30.0               | NEW: GHSA-vv64-95pc-vj9v (Kerberos OOB decrypt, High) + GHSA-rqgv-grx4-xm6x (RDSTLS auth bypass, High) disclosed 2026-07-26 — both fixed in 3.30.0. CVE-2026-64624 (.rdp RCE, 7.3) fix in 3.30.0 not conclusively confirmed upstream.
+libvpx           | 1.16.0               | 1.16.0               | No change
+FFmpeg           | 8.1.2                | 8.1.2                | No change; CVE-2026-64832 (NVDEC double-free, CVSS 8.8), CVE-2026-66036/66039/66040/66041 (all CVSS 8.8) still unpatched upstream; no 8.1.3 released
+libwebsockets    | 4.5.8                | v5.0.0 (2026-07-26)  | NEW: v5.0.0 tagged 2026-07-26 (major version bump); expected to fix CVE-2026-10650 (DoS, Medium); no formal release notes yet; verify patch commit 3f9f0c6 included before adopting
+libcurl          | 8.21.0               | 8.21.0               | No change; next release Sept 2, 2026
+minizip-ng       | 4.2.2                | 4.2.2                | No change; symlink issues #936/#944 still without CVE assignment
+libwebm          | 1.0.0.32             | 1.0.0.32             | No change
+AMF              | 1.5.2                | 1.5.2                | No change
+Opus             | 1.6.1                | 1.6.1                | No change
+x264             | r3222+               | r3222+               | No change
+CUDA             | 13.3 Update 1        | 13.3 Update 1        | No change
+NV Codec SDK     | 13.0.19              | 13.0.19              | No change
+zlib             | 1.3.2                | 1.3.2                | CORRECTION: CVE-2026-22184 (CVSS 7.8–9.3) confirmed fixed in 1.3.2; scope is contrib/untgz demo utility only (disputed). No new CVEs.
+libssh           | 0.12.1               | 0.12.1               | No change; 0.12.1 (2026-07-21) still latest
+libssh2          | commit 7acf3df       | No official tag      | No change; CVE-2026-55200 (CVSS 9.2 CRITICAL RCE with public PoC) fix exists at commit 7acf3df — no official tagged release in GitHub; CVE-2026-55199 (CVSS 8.2 DoS) and CVE-2025-15661 (CVSS 8.3) also outstanding
+
+Action items:
+- FreeRDP: Confirm 3.30.0 deployed; GHSA-vv64-95pc-vj9v/rqgv-grx4-xm6x now public. Verify
+  CVE-2026-64624 fix status with upstream.
+- libwebsockets: Evaluate v5.0.0 upgrade; breaking API changes expected; confirm CVE-2026-10650
+  patch (commit 3f9f0c6) is included before adopting.
+- FFmpeg: 5× CVSS-8.8 CVEs (CVE-2026-64832, -66036, -66039, -66040, -66041) unpatched in any
+  released version. Monitor ffmpeg.org/security.html for 8.1.3.
+- libssh2: CVE-2026-55200 CVSS 9.2 CRITICAL with public PoC — fix at commit level only; no
+  official tagged release. Consume patch commit directly or await formal release.
+- zlib: CVE-2026-22184 resolved (fixed in 1.3.2 already in use). No further action required.
+
+NOTE: Jira ticket unavailable (proxy blocks splashtop.atlassian.net). Installed versions unknown.
+
 === 2026-07-26 01:02 UTC ===
 Last review: UNKNOWN — Jira (splashtop.atlassian.net) blocked by network proxy (403); current versions not retrieved from ticket.
 
