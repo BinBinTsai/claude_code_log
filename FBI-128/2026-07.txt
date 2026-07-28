@@ -1,3 +1,40 @@
+=== 2026-07-28 01:03 UTC ===
+Last review: 2026-07-27 (prior log entry; Jira API still blocked by sandbox egress policy)
+
+Notable new findings since 2026-07-27:
+- AMF: CVE-2026-14623 surfaced on VulDB (exact severity/description limited in public feeds;
+  advisory references AMF encoder component). Not previously tracked — verify affected version
+  and whether 1.5.2 is patched. Check AMD security advisories for details.
+- CUDA: 13.4.0 Developer Preview released July 2026. Not a stable/LTS release; 13.3 Update 1
+  remains the production baseline. No security advisories for 13.3/13.4 found.
+
+Library          | Current (last known) | New Latest            | CVE / Notes
+-----------------|----------------------|-----------------------|--------------------------------------------------------------
+FreeRDP          | 3.30.0               | 3.30.0                | No change; GHSA-vv64-95pc-vj9v + GHSA-rqgv-grx4-xm6x (both High, fixed in 3.30.0) remain action items
+libvpx           | 1.16.0               | 1.16.0                | No change
+FFmpeg           | 8.1.2                | 8.1.2                 | No change; CVE-2026-64832, CVE-2026-66036/66039/66040/66041 (all CVSS 8.8) still unpatched upstream; no 8.1.3 released
+libwebsockets    | 4.5.8                | v5.0.0 (2026-07-26)   | No change; v5.0.0 tagged GitHub but no formal release notes yet; CVE-2026-10650 fix (commit 3f9f0c6) expected included
+libcurl          | 8.21.0               | 8.21.0                | No change; next release Sept 2, 2026
+minizip-ng       | 4.2.2                | 4.2.2                 | No change
+libwebm          | 1.0.0.32             | 1.0.0.32              | No change
+AMF              | 1.5.2                | 1.5.2                 | NEW: CVE-2026-14623 found on VulDB; severity/fix status not yet confirmed — verify
+Opus             | 1.6.1                | 1.6.1                 | No change
+x264             | r3222+               | r3222+                | No change
+CUDA             | 13.3 Update 1        | 13.4.0 Dev Preview    | NEW: 13.4.0 Developer Preview released July 2026; 13.3 Update 1 remains stable baseline; no security advisories
+NV Codec SDK     | 13.0.19              | 13.0.19               | No change
+zlib             | 1.3.2                | 1.3.2                 | No change; CVE-2026-22184 confirmed fixed in 1.3.2 (contrib/untgz only)
+libssh           | 0.12.1               | 0.12.1                | No change; 0.12.1 still latest
+libssh2          | commit 7acf3df       | No official tag       | No change; CVE-2026-55200 (CVSS 9.2 CRITICAL, public PoC) fix at commit level only — no tagged release yet
+
+Action items (ongoing):
+- AMF: Investigate CVE-2026-14623 severity and whether 1.5.2 is affected/patched.
+- FreeRDP: Confirm 3.30.0 deployed; monitor for CVE-2026-64624 patch confirmation.
+- libwebsockets: Evaluate v5.0.0 upgrade; await formal release notes; verify CVE-2026-10650 patch.
+- FFmpeg: 5× CVSS-8.8 CVEs unpatched — monitor ffmpeg.org/security.html for 8.1.3.
+- libssh2: CVE-2026-55200 CVSS 9.2 CRITICAL with public PoC — consume commit 7acf3df or await tagged release.
+
+NOTE: Jira ticket unavailable (proxy blocks splashtop.atlassian.net). Installed versions unknown.
+
 === 2026-07-27 01:02 UTC ===
 Last review: 2026-07-26 (prior log entry; Jira API still blocked by sandbox egress policy)
 
