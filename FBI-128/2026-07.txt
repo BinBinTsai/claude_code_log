@@ -1,3 +1,22 @@
+=== 2026-07-29 01:02 UTC ===
+Last review: N/A — Jira (splashtop.atlassian.net) blocked by network egress policy; ticket data unavailable this run.
+Note: Web search results used for CVE/release data. Current versions from ticket unknown.
+
+freerdp      | (Jira N/A) | 3.28.0 (2026-07-06) | CVE-2026-57156 (RCE/DoS via integer overflow), CVE-2026-57157 (OOB read/info disclosure), CVE-2026-57158 (info disclosure), CVE-2026-23530/23532. PATCH RECOMMENDED.
+libvpx       | (Jira N/A) | 1.16.0 (2026-01-21) | CVE-2026-1861 (heap overflow, Chrome/Edge, Feb 2026), CVE-2026-2447 (heap overflow CVSS 8.8, Firefox/Thunderbird, Feb 2026). PATCH RECOMMENDED.
+FFmpeg       | (Jira N/A) | 8.1.2              | CVE-2026-8461/PixelSmash (CVSS 8.8, heap overflow), CVE-2026-64832 (CVSS 8.8 double-free in NVDEC, 2026-07-22), CVE-2026-66039 (CVSS 8.8 MACE6 integer overflow, 2026-07-24), CVE-2026-66036/66041 (vf_hqdn3d and vf_quirc, 2026-07-24). MULTIPLE HIGH SEVERITY.
+libwebsockets| (Jira N/A) | 4.5.8 (2026-07-18) | CVE-2026-10650 (SSH handler resource consumption, medium severity, remote no-auth). Update to 4.5.8.
+libcurl      | (Jira N/A) | 8.21.0 (2026-06-24)| CVE-2026-8932 (CVSS 9.8, mTLS auth bypass), CVE-2026-9080 (CVSS 9.8, use-after-free in multi-socket), CVE-2026-9079 (stale proxy password leak, 2026-07-03), 18 CVEs total in 8.21.0. CRITICAL — UPDATE IMMEDIATELY.
+minizip      | (Jira N/A) | (no 2026 release)  | CVE-2023-45853 (integer overflow, still unpatched in some distros). No new 2026 CVEs found.
+libwebm      | (Jira N/A) | (no 2026 release)  | No new CVEs or releases found in 2026.
+AMF          | (Jira N/A) | 1.5.2 (2026-05)    | Updated FFmpeg to 8.0.1; requires AMD Adrenalin 26.5.1+. No security CVEs found.
+Opus         | (Jira N/A) | 1.6.1 (2026-01-14) | No security CVEs found in 2026. Bug fixes only.
+x264         | (Jira N/A) | (no 2026 release)  | No new CVEs or releases found in 2026.
+CUDA         | (Jira N/A) | (check NVIDIA)     | No specific CUDA CVEs found in search. Monitor NVIDIA security bulletins.
+NV Codec SDK | (Jira N/A) | 13.0 (Blackwell)   | Jetson Thor encode/decode support added Jan 2026. No security CVEs found.
+zlib         | (Jira N/A) | 1.3.2 (2026-02-17) | CVE-2026-22184 (buffer overflow in untgz demo utility only, NOT core lib). Core library unaffected.
+libssh       | (Jira N/A) | (check release)    | CVE-2026-0964 (improper SCP path sanitation), CVE-2026-0965 (DoS via config file), CVE-2026-0966 (DoS via zero-length input in ssh_get_hexa). PATCH RECOMMENDED.
+
 === 2026-07-28 01:03 UTC ===
 Last review: 2026-07-27 (prior log entry; Jira API still blocked by sandbox egress policy)
 
