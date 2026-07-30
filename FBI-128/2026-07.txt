@@ -1,3 +1,38 @@
+=== 2026-07-30 01:02 UTC ===
+Last review: 2026-07-29 (prior log entry; Jira API still blocked by sandbox egress policy)
+Note: Jira inaccessible — web search used. Installed versions unknown.
+
+CORRECTION: July 29 entry incorrectly cited FreeRDP 3.28.0 as latest; 3.30.0 (July 16) is current.
+AMF CVE-2026-14623 from July 28 entry confirmed NOT AMD AMF (Advanced Media Framework) — it affects
+OMEC 5G AMF (omec-project). False alarm; AMD AMF remains CVE-free.
+
+Library       | Last known current | New latest          | CVE / Notes
+--------------|-------------------|---------------------|------------------------------------------------------------
+FreeRDP       | 3.30.0            | 3.30.0              | No change. Latest is 3.30.0 (2026-07-16). Confirm 3.30.0 deployed.
+libvpx        | 1.16.0            | 1.16.0              | No change. CVE-2026-1861/2447 still actionable.
+FFmpeg        | 8.1.2             | 8.1.2               | No change. No 8.1.3 released. CVE-2026-64832, CVE-2026-66036/66039/66041 (all CVSS 8.8) still unpatched upstream — monitor ffmpeg.org/security.html.
+libwebsockets | 4.5.8             | v5.0.0 (tag only)   | v5.0.0 tagged on GitHub ~July 26; no formal release notes yet. CVE-2026-10650 fix expected included. Monitor for official release.
+libcurl       | 8.21.0            | 8.21.0              | No change. Next release ~Sept 2, 2026.
+minizip       | 4.2.2             | 4.2.2               | No change.
+libwebm       | 1.0.0.32          | 1.0.0.32            | No change.
+AMF           | 1.5.2             | 1.5.2               | No change. CVE-2026-14623 confirmed NOT AMD AMF — false alarm cleared.
+Opus          | 1.6.1             | 1.6.1               | No change.
+x264          | r3222+            | r3222+              | No change.
+CUDA          | 13.3 Update 1     | 13.4.0 Dev Preview  | 13.3 still stable baseline. 13.4.0 dev preview only. No security advisories.
+NV Codec SDK  | 13.0.19           | 13.0.19             | No change.
+zlib          | 1.3.2             | 1.3.2               | No change. CVE-2026-22184 confirmed fixed (contrib/untgz only, core unaffected).
+libssh        | 0.12.1            | 0.12.1              | No change. 0.12.1 still latest (July 21 release with CVE-2026-15370, CVE-2026-59842–59851).
+libssh2       | (commit 7acf3df)  | (no tagged release) | CRITICAL: CVE-2026-55200 (CVSS 9.2) — fix merged to mainline but still no official tagged release. Distributions backporting independently. Monitor https://github.com/libssh2/libssh2/releases for tagged release.
+
+Action items (ongoing):
+- FreeRDP: Confirm 3.30.0 is deployed. 3 critical advisories (GHSA-m37j-jcr2-8gcc, GHSA-vv64-95pc-vj9v, GHSA-rqgv-grx4-xm6x) fixed in 3.30.0.
+- FFmpeg: 5× CVSS-8.8 CVEs still unpatched. Await 8.1.3.
+- libssh2: CVE-2026-55200 CVSS 9.2 CRITICAL with public PoC — apply commit patch or await tagged release.
+- libwebsockets: Evaluate v5.0.0 when formal release notes publish.
+- libvpx: CVE-2026-1861/2447 heap overflows — confirm 1.16.0 is deployed.
+
+NOTE: Jira ticket unavailable (proxy blocks splashtop.atlassian.net). Installed versions unknown.
+
 === 2026-07-29 01:02 UTC ===
 Last review: N/A — Jira (splashtop.atlassian.net) blocked by network egress policy; ticket data unavailable this run.
 Note: Web search results used for CVE/release data. Current versions from ticket unknown.
