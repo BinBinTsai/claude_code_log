@@ -1,0 +1,18 @@
+=== 2026-08-01 01:02 UTC ===
+Last review: 2026-07-30 (prior log entry; Jira API blocked by sandbox egress policy)
+Target: OpenSSL 3.5.x (upgrade target from ticket; exact pinned version unknown without Jira access)
+
+No changes since 2026-07-30.
+
+OpenSSL 3.5.x status as of 2026-08-01:
+- Latest 3.5.x release: 3.5.7 (2026-06-09) — no 3.5.8 published
+- No new CVEs for OpenSSL 3.5.x found since 2026-07-30
+- No new security advisory from openssl-library.org since last check
+- Next 3.5.x release expected ~September 2026 per OpenSSL cadence
+- OpenSSL 3.6.x series also available (3.6.3 latest) for projects able to upgrade
+
+Recommendation: Upgrade target >= 3.5.7 unchanged. Monitor openssl-library.org/news/secadv/ for advisories.
+
+NOTE: Jira ticket unavailable (proxy blocks splashtop.atlassian.net). Upgrade target version
+from ticket unknown; monitoring 3.5 LTS branch.
+
