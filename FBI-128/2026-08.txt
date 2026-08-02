@@ -1,3 +1,25 @@
+=== 2026-08-02 01:04 UTC ===
+NOTE: Jira ticket FBI-128 was inaccessible (proxy policy blocks splashtop.atlassian.net).
+Last review date unknown. Versions below reflect latest public releases / CVEs found today.
+
+Library      | Latest Known                 | CVE / Notes
+-------------|------------------------------|--------------------------------------------------------------
+freerdp      | 3.30.0 (2026-07-16)          | 3.29.0 (2026-07-14) fixed 22 CVEs; 3.30.0 is security/bugfix release — UPDATE REQUIRED
+libvpx       | 1.16.0 (2026-01-21)          | No new release or CVE found since Jan 2026
+FFmpeg       | 8.1.2 (2026-06-27)           | CVE-2026-8461: OOB write in MagicYUV decoder (DoS/RCE); fix in 8.1.2
+libwebsockets| unknown                      | No specific 2026 CVE/release found in this search
+libcurl      | 8.21.0 (2026-06-24)          | 18 CVEs patched: CVE-2026-8932 (25-yr-old mTLS reuse/auth bypass), CVE-2026-9080 (UAF→RCE), CVE-2026-9545 (HTTP/3 early data leak) — UPDATE REQUIRED
+minizip      | unknown                      | No new 2026 release found; CVE-2023-45853 (heap overflow) still unpatched upstream in zlib ≤1.3
+libwebm      | unknown                      | No 2026 CVE/release found in this search
+AMF          | unknown                      | CVE-2026-14623 reported; details limited
+Opus         | unknown                      | No 2026 CVE/release found in this search
+x264         | archived                     | ShiftMediaProject/x264 repo archived 2026-01-26 (read-only)
+CUDA         | unknown                      | No 2026 CVE/release found in this search
+NV Codec SDK | unknown                      | No 2026 CVE/release found in this search
+zlib         | unknown (upstream ≤1.3.1)    | CVE-2026-22184 (critical, buffer overflow in untgz); CVE-2026-27171 (CPU DoS via crc32combine64) — REVIEW REQUIRED
+libssh       | 0.12.2 (2026-07-28)          | CVE-2026-15370, CVE-2026-59842 through 59846 fixed in 0.12.1/0.12.2; libssh2 CVE-2026-55200 (critical RCE, PoC public) — UPDATE REQUIRED
+
+
 === 2026-08-01 01:02 UTC ===
 Last review: 2026-07-30 (prior log entry; Jira API blocked by sandbox egress policy)
 Note: Jira inaccessible — web search used. splashtop.atlassian.net blocked by egress policy (403).
@@ -31,4 +53,3 @@ Action items:
 - FreeRDP: Confirm 3.30.0 is deployed (3 critical GHSAs fixed).
 
 NOTE: Jira ticket unavailable (proxy blocks splashtop.atlassian.net). Installed versions unknown.
-

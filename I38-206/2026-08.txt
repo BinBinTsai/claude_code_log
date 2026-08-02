@@ -1,3 +1,19 @@
+=== 2026-08-02 01:04 UTC ===
+NOTE: Jira ticket I38-206 was inaccessible (proxy policy blocks splashtop.atlassian.net).
+Last review date unknown. Target version from ticket unknown; assuming OpenSSL 3.5.x upgrade tracking.
+
+Target: OpenSSL 3.5.x (latest patch: 3.5.7, June 2026)
+
+OpenSSL 3.5.x CVEs and releases found:
+- CVE-2025-15467 (CVSS 9.8 critical): Stack buffer overflow via malformed encrypted message; affects 3.5.x; patched in earlier 3.5.x release (Jan 27, 2026)
+- CVE-2025-11187 (moderate): PKCS#12 MAC verification stack overflow (DoS/RCE potential); affects 3.5.x; patched
+- CVE-2026-31790 (moderate): RSA KEM RSASVE uninitialized memory exposure; fix: upgrade to OpenSSL 3.5.6+ (Apr 2026 batch)
+- OpenSSL 3.5.7 (June 2026): Heap use-after-free in PKCS7_verify, CMS AuthEnvelopedData vulns, QUIC PATH_CHALLENGE memory growth, QUIC NULL deref, AES-OCB IV issue, heap overflow in ASN.1 multibyte string, OOB read in CMS password-based decrypt, heap over-read in ASN.1 content parsing (affects 3.5.0 before 3.5.7), PKCS#12 PBMAC1 validation, NULL deref in password-based CMS decrypt — HIGH severity present
+- No 3.5.8 release found as of this check (2026-08-02)
+
+Recommendation: Ensure upgrade target is 3.5.7+. Multiple HIGH CVEs fixed since initial 3.5 release.
+
+
 === 2026-08-01 01:02 UTC ===
 Last review: 2026-07-30 (prior log entry; Jira API blocked by sandbox egress policy)
 Target: OpenSSL 3.5.x (upgrade target from ticket; exact pinned version unknown without Jira access)
@@ -15,4 +31,3 @@ Recommendation: Upgrade target >= 3.5.7 unchanged. Monitor openssl-library.org/n
 
 NOTE: Jira ticket unavailable (proxy blocks splashtop.atlassian.net). Upgrade target version
 from ticket unknown; monitoring 3.5 LTS branch.
-
