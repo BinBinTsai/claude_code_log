@@ -1,3 +1,23 @@
+=== 2026-08-03 01:03 UTC ===
+NOTE: Jira ticket I38-206 could not be fetched (proxy policy blocks splashtop.atlassian.net).
+Last review: unknown — checked via web search for OpenSSL 3.5.x news since ~2026-07-01.
+Target: OpenSSL 3.5.x (upgrade target from ticket; exact version unconfirmed)
+
+OpenSSL 3.5.x Status:
+- Latest known 3.5.x release: 3.5.6 (released 2026-04-07)
+    CVE-2026-31790 (MODERATE): Incorrect failure handling in RSA KEM RSASVE encapsulation
+    CVE-2026-2673 (MODERATE): Loss of key agreement group tuple when DEFAULT keyword used
+    + 6 low-severity flaws addressed
+- No 3.5.7+ release found as of 2026-08-03.
+- OpenSSL 4.0.0 was released 2026-04-14 (new major version, separate branch)
+
+Earlier 2026 key events (for context):
+- 3.5.5 (2026-01-27): Fixed CVE-2025-15467 (CRITICAL, CVSS 9.8, pre-auth RCE stack buffer overflow)
+    Also fixed CVE-2026-22795 (PKCS#12 ASN1_TYPE validation) and CVE-2026-22796 (type confusion)
+
+No new OpenSSL 3.5.x releases or CVEs found since April 2026.
+
+
 === 2026-08-02 01:04 UTC ===
 NOTE: Jira ticket I38-206 was inaccessible (proxy policy blocks splashtop.atlassian.net).
 Last review date unknown. Target version from ticket unknown; assuming OpenSSL 3.5.x upgrade tracking.

@@ -1,3 +1,38 @@
+=== 2026-08-03 01:03 UTC ===
+NOTE: Jira ticket FBI-128 could not be fetched (proxy policy blocks splashtop.atlassian.net).
+Last review: unknown — checked via web search for releases/CVEs since ~2026-07-01.
+
+Library          | Notes
+-----------------|-----------------------------------------------------------------------
+freerdp          | NEW: 3.29.0 released 2026-07-13, fixes 22 advisories including:
+                 |   CVE-2026-67290 (heap OOB read in TSMF FFmpeg decoder, HIGH)
+                 |   CVE-2026-67292 (buffer over-disclosure in WebSocket transport, MED)
+                 |   ACTION REQUIRED: Upgrade to >= 3.29.0
+libvpx           | 1.16.0 released 2026-01-21 (heap buffer overflow fix). No newer release found.
+FFmpeg           | Latest stable: 7.1.5 (2026-06-20) / source: 8.1.2
+                 |   CVE-2026-8461, CVE-2026-30999 (DoS via out-of-bounds read) noted.
+libwebsockets    | CVE-2026-10650 (MED) July 2026: resource exhaustion in SSH handler,
+                 |   affects <= 4.5.8; check if version is patched.
+libcurl          | NEW: curl 8.21.0 released 2026-06-24, record 18 CVEs fixed including:
+                 |   CVE-2026-8932 (25-year-old connection reuse after cert change, MED)
+                 |   CVE-2026-8926 (password leak via netrc), CVE-2026-8925 (double-free)
+                 |   CVE-2026-9080, CVE-2026-10536 (use-after-free)
+                 |   ACTION REQUIRED: Upgrade to curl >= 8.21.0
+minizip          | No new 2026 CVEs or releases found beyond CVE-2023-45853 (integer overflow).
+libwebm          | No new releases or CVEs found in 2026.
+AMF              | No new releases or CVEs found in 2026.
+Opus             | No new releases or CVEs found in 2026.
+x264             | No new releases or CVEs found in 2026.
+CUDA             | No new releases or CVEs found in 2026.
+NV Codec SDK     | No new releases or CVEs found in 2026.
+zlib             | No new CVEs found in 2026.
+libssh (libssh2) | CRITICAL: CVE-2026-55200 (CVSS 9.2), PoC released June 2026.
+                 |   RCE via memory corruption from malicious SSH server, affects <= 1.11.1
+                 |   CVE-2026-55199 (CVSS 8.2) DoS via bogus extension count
+                 |   CVE-2025-15661 (CVSS 8.3) SFTP heap over-read
+                 |   ACTION REQUIRED: Upgrade libssh2 to >= 1.12.0
+
+
 === 2026-08-02 01:04 UTC ===
 NOTE: Jira ticket FBI-128 was inaccessible (proxy policy blocks splashtop.atlassian.net).
 Last review date unknown. Versions below reflect latest public releases / CVEs found today.
