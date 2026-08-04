@@ -1,3 +1,24 @@
+=== 2026-08-04 01:03 UTC ===
+NOTE: Jira ticket I38-206 inaccessible (proxy policy blocks splashtop.atlassian.net).
+Last review: 2026-08-03 (prior log entry). Web search used for all data below.
+Target: OpenSSL 3.5.x (upgrade target from ticket)
+
+OpenSSL 3.5.x status:
+- Latest release: 3.5.7 (security, High severity) — confirmed, no 3.5.8 found.
+- No new releases since yesterday's check.
+- 3.5.7 fixed High-severity CVEs:
+    CVE-2026-45447  Heap use-after-free in PKCS7_verify()
+    CVE-2026-34182  CMS AuthEnvelopedData accepts forged messages
+    CVE-2026-34183  Unbounded memory growth in QUIC PATH_CHALLENGE handler
+    CVE-2026-42764  NULL pointer dereference in QUIC server initial packet handling
+    CVE-2026-45445  AES-OCB IV ignored on EVP_Cipher() path
+    CVE-2026-7383   Heap buffer overflow in ASN.1 multibyte string conversion
+    CVE-2026-9076   Out-of-bounds read in CMS password-based decryption
+    CVE-2026-34180  Heap buffer over-read in ASN.1 content parsing
+
+ACTION REQUIRED: Ensure upgrade target is OpenSSL >= 3.5.7. Multiple High CVEs fixed.
+No new advisories found since yesterday. Next check 2026-08-05.
+
 === 2026-08-03 01:03 UTC ===
 NOTE: Jira ticket I38-206 could not be fetched (proxy policy blocks splashtop.atlassian.net).
 Last review: unknown — checked via web search for OpenSSL 3.5.x news since ~2026-07-01.

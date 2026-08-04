@@ -1,3 +1,41 @@
+=== 2026-08-04 01:03 UTC ===
+NOTE: Jira ticket FBI-128 inaccessible (proxy policy blocks splashtop.atlassian.net).
+Last review: 2026-08-03 (prior log entry). Web search used for all data below.
+
+Library       | Latest Stable             | CVE / Notes
+--------------|---------------------------|---------------------------------------------------------------
+freerdp       | 3.30.0 (2026-07-16)       | No change since yesterday. CVE-2026-68579 (CVSS 9.6 Critical,
+              |                           | heap OOB write in clipboard, fixed in 3.30.0) and CVE-2026-66402
+              |                           | (CVSS 9.8 Critical, TLS cert validation bypass, fixed in 3.29.0)
+              |                           | remain unresolved if not yet upgraded. 3.29.0 fixed 22 advisories.
+              |                           | ACTION REQUIRED if not on 3.30.0.
+libvpx        | 1.16.0 (2026-01-21)       | No new release. CVE-2026-1861 (heap OOB in Chrome libvpx) and
+              |                           | CVE-2026-2447 (CVSS 8.8 High, heap overflow affecting Firefox/
+              |                           | Thunderbird) remain open issues; confirm 1.16.0 is deployed.
+FFmpeg        | 8.1.2 (2026-07-30)        | CVE-2026-8461 "PixelSmash" (CVSS 8.8, heap OOB write in MagicYUV
+              |                           | decoder, RCE/DoS via crafted media file). Fixed in 8.1.2.
+              |                           | ACTION REQUIRED if < 8.1.2.
+libwebsockets | 4.5.2                     | CVE-2026-10650 (CVSS 6.9 Medium, resource exhaustion in SSH
+              |                           | handler via manipulated msg_len). Patch commit available but
+              |                           | no new formal release. Monitor warmcat/libwebsockets.
+libcurl       | 8.21.0 (2026-06-24)       | 18 CVEs fixed. Key: CVE-2026-8932 (25-yr-old mTLS auth bypass),
+              |                           | CVE-2026-8286 (STARTTLS connection reuse), CVE-2026-11856
+              |                           | (Digest auth cross-origin leak), CVE-2026-8926 (password leak
+              |                           | via netrc). ACTION REQUIRED if < 8.21.0.
+minizip       | 4.1.0 (2026-01-21)        | No new CVEs or releases found.
+libwebm       | 1.0.0.32 (~2025-07)       | No new CVEs or releases found in 2026.
+AMF           | 1.5.2 (2026-05)           | No CVEs. Updated FFmpeg to 8.0.1 internally. Req: Adrenalin 26.5.1.
+Opus          | 1.6.1 (2026-01-14)        | No new CVEs or releases found.
+x264          | r165.3223+39 (rolling)    | No CVEs. No formal release since 2025.
+CUDA          | 13.3.1 (2026-06-29)       | No security CVEs found. 13.4.0 dev preview available.
+NV Codec SDK  | 13.1 (~2026-07)           | No CVEs. Adds AV1 B-frames, zero-copy transcode.
+zlib          | 1.3.2 (2026-02-17)        | No new CVEs in 1.3.2. Release was security-audit-driven.
+libssh        | 0.12.2 (2026-07-28)       | CVE-2026-59843 (DoS via zero advertised channel size, fixed in
+              |                           | 0.12.2). CVE-2026-0968 (heap read in SFTP). 0.12.1+0.11.5 also
+              |                           | fixed CVE-2026-15370/59842/59844-59851. ACTION: ensure 0.12.2+.
+              |                           | NOTE: libssh2 (separate lib) has CVE-2026-55200 (CVSS 9.2
+              |                           | Critical RCE, PoC public). Affects libssh2 <= 1.11.1.
+
 === 2026-08-03 01:03 UTC ===
 NOTE: Jira ticket FBI-128 could not be fetched (proxy policy blocks splashtop.atlassian.net).
 Last review: unknown — checked via web search for releases/CVEs since ~2026-07-01.
