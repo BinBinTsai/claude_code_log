@@ -1,3 +1,22 @@
+=== 2026-08-16 01:03 UTC ===
+NOTE: Jira access blocked by egress policy (splashtop.atlassian.net:443 → 403 policy denial). Last review date and current tracked versions unavailable from ticket. Web search findings recorded below.
+
+Library       | New Latest Known | CVE / Notes
+freerdp       | 3.29.0 (Jul 13)  | CVE-2026-22859 (OOB read URBDRC client, fixed 3.20.1); CVE-2026-23883 (UAF xf_Pointer_New DoS/RCE, fixed 3.21.0); CVE-2026-23884 (UAF offscreen bitmap, fixed 3.21.0); CVE-2026-23531/2/3/4 (heap buffer overflows, fixed 3.21.0)
+FFmpeg        | 9.0.1 (Aug 12)   | CVE-2026-8461 (OOB write MagicYUV decoder in libavcodec, affects <8.1.2, DoS/potential RCE)
+libvpx        | 1.16.0 (Jan 21)  | No new 2026 CVEs found
+libwebsockets | 4.5.8 (Mar 30)   | No new 2026 CVEs found
+libcurl       | 8.21.0 (Jun 24)  | No new 2026 CVEs found
+libssh        | 0.11.5 (Jul 21)  | CVE-2026-59851 (GSSAPI auth bypass, fixed 0.11.5/0.12.1); CVE-2026-0964/5/6/7/8 (path traversal, DoS, buffer underflow, OOB read; fixed in 0.11.4)
+minizip       | n/a              | CVE-2023-45853 (integer overflow in zlib ≤1.3 minizip) still active; no new 2026 CVEs found
+libwebm       | n/a              | No new 2026 CVEs found
+AMF           | n/a              | No new 2026 CVEs found
+Opus          | n/a              | No new 2026 CVEs found
+x264          | n/a              | No new 2026 CVEs found
+CUDA          | n/a              | No new 2026 CVEs found
+NV Codec SDK  | n/a              | No new 2026 CVEs found
+zlib          | n/a              | No new 2026 CVEs found
+
 === 2026-08-04 01:03 UTC ===
 NOTE: Jira ticket FBI-128 inaccessible (proxy policy blocks splashtop.atlassian.net).
 Last review: 2026-08-03 (prior log entry). Web search used for all data below.

@@ -1,3 +1,17 @@
+=== 2026-08-16 01:03 UTC ===
+NOTE: Jira access blocked by egress policy (splashtop.atlassian.net:443 → 403 policy denial). Last review date and upgrade target unavailable from ticket. Web search findings recorded below.
+Target: OpenSSL 3.5.x (LTS series, supported until 2030-04-08)
+
+Latest 3.5.x: 3.5.7
+
+CVEs in OpenSSL 3.5.x (cumulative findings from web search):
+  CVE-2025-15467 (CVSS 9.8) — Stack buffer overflow in CMS AuthEnvelopedData parsing; pre-auth RCE possible; fixed in 3.5.5
+  CVE-2025-11187           — Improper PBMAC1 parameter validation; fixed in 3.5.5
+  CVE-2025-15468           — NULL dereference in SSL_CIPHER_find(); fixed in 3.5.5
+  3.5.7 additionally fixes: heap UAF in PKCS7_verify(), CMS AuthEnvelopedData issues, QUIC unbounded memory growth, QUIC NULL ptr deref, AES-OCB IV reuse, ASN.1 heap buffer overflow, CMS OOB read in password-based decryption
+
+ACTION: Ensure upgrade target is 3.5.7 (minimum) to cover all known CVEs including critical CVE-2025-15467.
+
 === 2026-08-04 01:03 UTC ===
 NOTE: Jira ticket I38-206 inaccessible (proxy policy blocks splashtop.atlassian.net).
 Last review: 2026-08-03 (prior log entry). Web search used for all data below.
